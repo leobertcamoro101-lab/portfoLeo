@@ -82,7 +82,7 @@ function Hero() {
           {/* react router dom v2 and v1*/}
           <Link to="/aboutMe">
           <img
-            src="/public/profile.jpg"
+            src="/profile.jpg"
             alt="Leobert Camoro"
             className="w-full h-full object-cover"
           />
