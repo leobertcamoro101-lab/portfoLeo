@@ -85,7 +85,7 @@ const ScrollToTopButton = () => {
         }}
       >
         {/* Label */}
-        <span className="scroll-label text-[0.65rem] tracking-[0.12em] uppercase text-slate-400 bg-[rgba(15,23,42,0.75)] border border-[rgba(148,163,184,0.15)] px-[0.65rem] py-[0.3rem] rounded-full backdrop-blur-sm opacity-0 translate-x-2 transition-all duration-200 whitespace-nowrap">
+        <span className="scroll-label text-[0.65rem] tracking-[0.12em] uppercase text-slate-400 bg-[#2A7A4B] border border-[rgba(148,163,184,0.15)] px-[0.65rem] py-[0.3rem] rounded-full backdrop-blur-sm opacity-0 translate-x-2 transition-all duration-200 whitespace-nowrap">
           Back to top
         </span>
 
@@ -157,3 +157,4 @@ const ScrollToTopButton = () => {
 };
 
 export default ScrollToTopButton;
+// [rgba(15,23,42,0.75)]
