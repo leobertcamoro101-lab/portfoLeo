@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Button from "../Button";
 import LinkButton from "../LinkButton";
 import TypewriterText from "../TypewriterText";
+import ProfileImage from "../../assets/profile.jpg";
 
 function Hero() {
   return (
@@ -82,7 +83,7 @@ function Hero() {
           {/* react router dom v2 and v1*/}
           <Link to="/aboutMe">
           <img
-            src="/profile.jpg"
+            src={ProfileImage}
             alt="Leobert Camoro"
             className="w-full h-full object-cover"
           />
