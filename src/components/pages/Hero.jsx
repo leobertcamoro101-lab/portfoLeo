@@ -81,7 +81,9 @@ function Hero() {
           /> */}
 
           {/* react router dom v2 and v1*/}
-          <Link to="/aboutMe">
+          <Link 
+          to="/aboutMe"
+          className="w-full h-full rounded-full overflow-hidden">
           <img
             src={ProfileImage}
             alt="Leobert Camoro"
