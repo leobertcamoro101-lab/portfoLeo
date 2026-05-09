@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ProfileImage from "../../../assets/profile.jpg";
 function ProfileHero() {
   return (
     <div className="max-w-[860px] mx-auto px-10 pt-16 pb-12">
@@ -6,7 +7,7 @@ function ProfileHero() {
 
         {/* Avatar */}
         <div className="w-[120px] h-[120px] rounded-full border-2 border-[#D9D4C9] shrink-0 overflow-hidden shadow-md">
-          <img src="/src/assets/IMG_1423.JPG" alt="Leobert Camoro" className="w-full h-full object-cover" />
+          <img src={ProfileImage} alt="Leobert Camoro" className="w-full h-full object-cover" />
         </div>
 
         {/* Info */}
