@@ -98,7 +98,6 @@ function Hero() {
           {" "}
           <TypewriterText
             words={[
-              "Udemy React Course Experience",
               "React",
               "react-hook-form",
               "redux",
