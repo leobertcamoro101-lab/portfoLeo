@@ -3,7 +3,7 @@ import { CERTIFICATES } from "./aboutMeData";
 
 function Certificates() {
   return (
-    <section className="max-w-[860px] mx-auto px-10 py-12">
+    <section id="certificates" className="max-w-[860px] mx-auto px-10 py-12">
       <SectionEyebrow>Certificates</SectionEyebrow>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {CERTIFICATES.map((cert) => (

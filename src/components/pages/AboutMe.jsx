@@ -1,8 +1,8 @@
-import ProfileHero from "./aboutMe/ProfileHero";
+import ProfileHero from "./AboutMe/ProfileHero";
 import Divider from "../Divider";
-import WorkExperience from "./aboutMe/WorkExperince";
-import Education from "./aboutMe/Education";
-import Certificates from "./aboutMe/Certificates";
+import WorkExperience from "./AboutMe/WorkExperience";
+import Education from "./AboutMe/Education";
+import Certificates from "./AboutMe/Certificates";
 import ScrollToTopButton from "../ScrollToTopButton";
 
 

@@ -3,7 +3,7 @@ import { SKILLS } from '../data'
 
 function Skills() {
   return (
-    <section id="skills" className="max-w-[860px] mx-auto px-10 py-14">
+    <section id="skills" className=" max-w-[860px] mx-auto px-10 py-14 ">
       <SectionEyebrow>Skills</SectionEyebrow>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(170px,1fr))] gap-3">
         {SKILLS.map((group) => (

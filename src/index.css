@@ -28,6 +28,9 @@
   50%       { opacity: 0; }
 }
 
+[id] {
+  scroll-margin-top: 80px;
+}
 /* ── Base styles ───────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;

@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import ProfileImage from "../../../assets/profile.jpg";
 function ProfileHero() {
   return (
-    <div className="max-w-[860px] mx-auto px-10 pt-16 pb-12">
-      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
+    <div className="animate-[fadeUp_0.5s_ease_both] [animation-delay:0.05s] max-w-[860px] mx-auto px-10 pt-16 pb-12 ">
+      <div className=" flex flex-col sm:flex-row items-center sm:items-start gap-8 p-12">
 
         {/* Avatar */}
         <div className="w-[120px] h-[120px] rounded-full border-2 border-[#D9D4C9] shrink-0 overflow-hidden shadow-md">

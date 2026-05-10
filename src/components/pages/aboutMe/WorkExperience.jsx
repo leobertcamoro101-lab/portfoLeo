@@ -4,7 +4,7 @@ import { WORK_EXPERIENCE } from "./aboutMeData";
 
 function WorkExperience() {
   return (
-    <section className="max-w-[860px] mx-auto px-10 py-12">
+    <section id="work-experience" className="max-w-[860px] mx-auto px-10 py-12">
       <SectionEyebrow>Work Experience</SectionEyebrow>
       <div className="grid grid-cols-1 gap-4">
         {WORK_EXPERIENCE.map((job) => (

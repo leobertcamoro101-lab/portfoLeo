@@ -3,7 +3,7 @@ import { EDUCATION } from "./aboutMeData";
 
 function Education() {
   return (
-    <section className="max-w-[860px] mx-auto px-10 py-12">
+    <section id="educational-background" className="max-w-[860px] mx-auto px-10 py-12">
       <SectionEyebrow>Educational Background</SectionEyebrow>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {EDUCATION.map((edu) => (
