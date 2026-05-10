@@ -1,4 +1,4 @@
-import ProfileHero from "./AboutMe/ProfileHero";
+import ProfileHero from "./AboutMe/ProfileHero"
 import Divider from "../Divider";
 import WorkExperience from "./AboutMe/WorkExperience";
 import Education from "./AboutMe/Education";
