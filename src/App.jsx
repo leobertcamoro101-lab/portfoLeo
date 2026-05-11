@@ -1,36 +1,3 @@
-// import Navbar from "./components/Navbar";
-// import Hero from "./components/pages/Hero";
-// import Divider from "./components/Divider";
-// import Projects from "./components/pages/Projects";
-// import Skills from "./components/pages/Skills";
-// import Contact from "./components/pages/Contact";
-// import Footer from "./components/Footer";
-// import useFonts from "./components/useFonts";
-// import ScrollToTopButton from "./components/ScrollToTopButton";
-
-// function App(){
-  
-//   useFonts();
-
-//   return (
-//     <div className="font-sans bg-[#F7F5F0] text-[#1A1814] min-h-screen">
-//       <Navbar />
-//       <Hero/>
-//       <Divider/>
-//       <Projects/>
-//       <Divider/>
-//       <Skills/>
-//       <Divider/>
-//       <Contact/>
-//       <ScrollToTopButton/>
-//       <Footer/>
-//     </div>
-    
-//   );
-// }
-
-// export default App;
-
 // for react router dom v2
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -91,38 +58,3 @@ function App(){
 }
 
 export default App;
-
-// for react router dom v1
-
-// import Hero from "./components/pages/Hero";
-// import Projects from "./components/pages/Projects";
-// import useFonts from "./components/useFonts";
-// import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import RootLayout from "./components/pages/RootLayout";
-// import Skills from "./components/pages/Skills";
-// import Contact from "./components/pages/Contact";
-// import AboutMe from "./components/pages/AboutMe";
-
-
-// function App() {
-//   const router = createBrowserRouter([
-//     {
-//       path: "/",
-//       element: <RootLayout />,
-//       children: [
-//         { index: true, element: <Hero /> },
-//         { path: "projects", element: <Projects /> },
-//         { path: "skills", element: <Skills /> },
-//         { path: "contact", element: <Contact /> },
-//         { path: "aboutMe", element: <AboutMe /> },
-//       ],
-//     },
-//   ]);
-//   useFonts();
-
-//   return (
-//       <RouterProvider router={router} />
-//   );
-// }
-
-// export default App;
