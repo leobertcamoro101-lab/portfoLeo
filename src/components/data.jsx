@@ -9,15 +9,6 @@ export const PROJECTS = [
       "My first personal portfolio website built with React, showcasing my projects and skills. It features a clean design, smooth animations, and responsive layout.",
     tags: ["React", "React Router", "Tailwind CSS", "Vite", "Netlify", "Vercel"],
   },
-  {
-    id: 2,
-    icon: "🛒",
-    iconBg: "bg-[#EDEAE3]",
-    title: "E-commerce Website",
-    description:
-      "A fully functional e-commerce website built with React and Node.js, featuring a modern design, user authentication, and payment integration.",
-    tags: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
-  }
 
 ];
 

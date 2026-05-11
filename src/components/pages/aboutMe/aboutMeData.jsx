@@ -31,14 +31,6 @@ export const EDUCATION = [
     description:
       "Graduated with a focus on web development and software engineering fundamentals.",
   },
-  {
-    id: 2,
-    degree: "Full Stack Web Development Bootcamp",
-    school: "Online Course",  
-    period: "2022",
-    description:
-      "Completed an intensive bootcamp covering frontend and backend web development technologies, including React, Node.js, and database management.", 
-  }
 ];
 
 export const CERTIFICATES = [
