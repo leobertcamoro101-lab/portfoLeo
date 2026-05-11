@@ -9,16 +9,6 @@ export const WORK_EXPERIENCE = [
       "Oversaw batch job processes, tracked execution status, and reported errors to ensure operational reliability. Logged into Linux servers to extract data, processed and organized information, and prepared structured reports in Excel for analysis. Uploaded and maintained files on developer websites, supporting project workflows and ensuring timely resource availability. Executed PostgreSQL queries to confirm successful file uploads, maintaining data integrity and accuracy across systems.",
     tags: ["React", "JavaScript", "HTML", "CSS", "Git", "Linux", "postgreSQL"],
   },
-  {
-    id: 2,
-    role: "Web Developer",
-    company: "Freelance", 
-    period: "January 2022 – March 2023",
-    type: "freelance",
-    description:
-      "Designed and developed responsive websites for small businesses and personal projects using HTML, CSS, and JavaScript. Collaborated with clients to understand their needs and delivered customized solutions that enhanced their online presence. Implemented SEO best practices to improve website visibility and user engagement.",
-    tags: ["HTML", "CSS", "JavaScript", "Responsive Design", "SEO"],    
-  }
 ];
 
 export const EDUCATION = [
