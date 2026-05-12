@@ -13,8 +13,8 @@ export const PROJECTS = [
 ];
 
 export const SKILLS = [
-  { category: "Frontend", items: ["React / Next.js", "TypeScript", "Tailwind CSS", "vercel", "netlify"] },
-  { category: "Backend",  items: ["Node.js", "Python"] },
-  { category: "Database", items: ["PostgreSQL", "MongoDB", "firebase",] },
+  { category: "Frontend", items: ["React / Next.js", "Tailwind CSS", "vercel", "netlify"] },
+  { category: "Backend",  items: ["Node.js"] },
+  { category: "Database", items: ["PostgreSQL", "MongoDB", "firebase"] },
   { category: "DevOps",   items: ["Docker", "Linux"] },
 ];

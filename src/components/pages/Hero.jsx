@@ -19,7 +19,7 @@ function Hero() {
         {/* Heading */}
         <h1 className="animate-[fadeUp_0.5s_ease_both] [animation-delay:0.12s] font-serif text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.02em] text-[#1A1814] mb-4">
           Hi, I'm <em className="text-[#7A7468] italic">Leobert Camoro</em> —
-          <br />a React developer.
+          <br />a React.js developer.
         </h1>
 
         {/* Bio */}
