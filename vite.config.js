@@ -5,26 +5,38 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  // theme: {
-  //   extend: {
-  //     fontFamily: {
-  //       serif: ["DM Serif Display", "serif"],
-  //       sans:  ["DM Sans", "sans-serif"],
-  //     },
-  //     keyframes: {
-  //       fadeUp: {
-  //         "0%":   { opacity: "0", transform: "translateY(18px)" },
-  //         "100%": { opacity: "1", transform: "translateY(0)" },
-  //       },
-  //       popIn: {
-  //         "0%":   { opacity: "0", transform: "scale(0.96) translateY(8px)" },
-  //         "100%": { opacity: "1", transform: "scale(1) translateY(0)" },
-  //       },
-  //     },
-  //     animation: {
-  //       "fade-up": "fadeUp 0.5s ease both",
-  //       "pop-in":  "popIn 0.4s ease both",
-  //     },
-  //   },
-  // },
+  server: {
+    middleware: [
+      (req, res, next) => {
+        // Content Security Policy - prevents XSS attacks
+        res.setHeader(
+          'Content-Security-Policy',
+          "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' cdn.jsdelivr.net cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' cdn.jsdelivr.net; font-src 'self' fonts.googleapis.com fonts.gstatic.com cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self' api.emailjs.com; frame-ancestors 'none';"
+        );
+        
+        // Prevent MIME type sniffing
+        res.setHeader('X-Content-Type-Options', 'nosniff');
+        
+        // Clickjacking protection - prevent embedding in iframes
+        res.setHeader('X-Frame-Options', 'DENY');
+        
+        // XSS protection (legacy, for older browsers)
+        res.setHeader('X-XSS-Protection', '1; mode=block');
+        
+        // Referrer policy - control referrer information
+        res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+        
+        // Permissions policy - control browser features
+        res.setHeader(
+          'Permissions-Policy',
+          'geolocation=(), microphone=(), camera=(), payment=()'
+        );
+        
+        // For HTTPS deployment, uncomment this:
+        // res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+        
+        next();
+      },
+    ],
+  },
 });

@@ -3,7 +3,7 @@ import Projects from "./Projects";
 import ScrollToTopButton from "../ScrollToTopButton";
 import Contact from "./Contact";
 import Skills from "./Skills";
-import Divider from "../Divider";
+import Divider from "../UI/Divider";
 
 function Landing() {
   return (

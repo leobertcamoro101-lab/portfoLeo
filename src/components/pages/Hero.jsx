@@ -1,6 +1,6 @@
 // import { Link } from "react-router-dom";
-import Button from "../Button";
-import LinkButton from "../LinkButton";
+import Button from "../UI/Button";
+import LinkButton from "../UI/LinkButton";
 import TypewriterText from "../TypewriterText";
 import ProfileImage from "../../assets/profile.jpg";
 

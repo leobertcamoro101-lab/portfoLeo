@@ -13,16 +13,15 @@ function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close menu on route change, run but curly red underlined error 
+  // Close menu on route change with timeout to avoid cascading renders
   useEffect(() => {
-    setMenuOpen(false);
+    let timeout;
+    timeout = setTimeout(() => {
+      setMenuOpen(false);
+    }, 0);
+    return () => clearTimeout(timeout);
   }, [location.pathname]);
-
-  // inspired idea from typewriter add timeout to prevent error, and it works fine, no more red curly underlined error
-  // useEffect(() => {
-  //   let timeout;
-  //   timeout = setTimeout(() => {
-  //     setMenuOpen(false);
+  
   //   }, 100);
   //   return () => clearTimeout(timeout);
   // }, [location]);

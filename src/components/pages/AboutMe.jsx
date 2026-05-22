@@ -1,5 +1,5 @@
 import ProfileHero from "./aboutMe/ProfileHero"
-import Divider from "../Divider";
+import Divider from "../UI/Divider";
 import WorkExperience from "./aboutMe/WorkExperience";
 import Education from "./aboutMe/Education";
 import Certificates from "./aboutMe/Certificates";
