@@ -11,7 +11,7 @@ export default defineConfig({
         // Content Security Policy - prevents XSS attacks
         res.setHeader(
           'Content-Security-Policy',
-          "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' cdn.jsdelivr.net cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' cdn.jsdelivr.net; font-src 'self' fonts.googleapis.com fonts.gstatic.com cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self' api.emailjs.com; frame-ancestors 'none';"
+          "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' cdn.jsdelivr.net cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com fonts.gstatic.com cdn.jsdelivr.net data:; img-src 'self' data: https:; connect-src 'self' api.emailjs.com https://fonts.googleapis.com https://fonts.gstatic.com; frame-ancestors 'none';"
         );
         
         // Prevent MIME type sniffing
