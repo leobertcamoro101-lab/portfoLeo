@@ -8,6 +8,7 @@
   [headers.values]
     # Content Security Policy - prevents XSS attacks
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' cdn.jsdelivr.net; font-src 'self' fonts.googleapis.com fonts.gstatic.com cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self' api.emailjs.com; frame-ancestors 'none';"
+    Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline' cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src 'self' https://api.emailjs.com; img-src 'self' data: blob:;"
     
     # Prevent MIME type sniffing
     X-Content-Type-Options = "nosniff"
