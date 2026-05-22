@@ -2,6 +2,7 @@ import Button from "../UI/Button";
 import ContactForm from "./Contact/ContactForm";
 
 function Contact() {
+  const email = "leobertcamoro101" + "@" + "gmail.com";
 
   return (
     <section id="contact" className="max-w-[860px] mx-auto px-5 sm:px-10 py-14">
@@ -15,7 +16,8 @@ function Contact() {
           Open to freelance projects, collaborations, and full-time roles.
         </p>
         <div className="flex flex-col sm:flex-row justify-center flex-wrap gap-3">
-          <Button href="mailto:leobertcamoro101@gmail.com" variant="white">Email</Button>
+          {/* <Button href="mailto:leobertcamoro101@gmail.com" variant="white">Email</Button> */}
+          <Button href={`mailto:${email}`} variant="white">Email</Button>
           <Button href="https://github.com/leobertcamoro101-lab" variant="ghost">GitHub</Button>
           <Button href="https://www.linkedin.com/in/leobert-camoro-1b811a231/" variant="ghost">LinkedIn</Button>
         </div>
