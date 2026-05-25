@@ -3,7 +3,7 @@ export const WORK_EXPERIENCE = [
     id: 1,
     role: "Software Engineer",
     company: "Sprobe Inc.",
-    period: "April 2023 – March 2026",
+    period: "April 2022 – March 2026",
     type: "full-time",
     description:
       "Oversaw batch job processes, tracked execution status, and reported errors to ensure operational reliability. Logged into Linux servers to extract data, processed and organized information, and prepared structured reports in Excel for analysis. Uploaded and maintained files on developer websites, supporting project workflows and ensuring timely resource availability. Executed PostgreSQL queries to confirm successful file uploads, maintaining data integrity and accuracy across systems.",

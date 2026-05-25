@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "projects": "プロジェクト",
+    "skills": "スキル",
+    "contact": "お問い合わせ",
+    "aboutMe": "自己紹介",
+    "back": "← ポートフォリオ",
+    "workExperience": "職務経歴",
+    "education": "学歴",
+    "certificates": "資格"
+  },
+  "hero": {
+    "badge": "仕事募集中",
+    "title": "こんにちは、",
+    "role": "React.JS 開発者です。",
+    "bio": "AIを活用した初心者開発者として、アクセシブルで洗練されたウェブ体験を作っています。クリーンなコードと直感的なUIに深くコミットし、人々の生活をより良くするソリューションを構築することに注力しています。",
+    "location": "フィリピン、セブ市",
+    "getInTouch": "お問い合わせ ↗",
+    "viewWork": "作品を見る"
+  },
+  "projects": { "title": "プロジェクト" },
+  "skills": { "title": "スキル" },
+  "contact": {
+    "title": "一緒に働きましょう",
+    "subtitle": "フリーランス、コラボレーション、フルタイムの募集に対応しています。",
+    "email": "メール",
+    "sendMessage": "メッセージを送る",
+    "name": "お名前",
+    "emailField": "メールアドレス",
+    "subject": "件名",
+    "message": "メッセージ",
+    "send": "送信 ↗",
+    "sending": "送信中...",
+    "success": "メッセージが送信されました！",
+    "error": "エラーが発生しました。もう一度お試しください。",
+    "namePlaceholder": "お名前を入力してください",
+    "emailPlaceholder": "メールアドレス",
+    "subjectPlaceholder": "件名を入力してください",
+    "messagePlaceholder": "プロジェクトや機会についてお知らせください"
+  },
+  "aboutMe": {
+    "badge": "仕事募集中・フィリピン、セブ市",
+    "role": "フロントエンド開発者 · React JS 愛好家",
+    "bio": "React JSの学習を始めたばかりの初心者開発者として、クリーンでアクセシブルなウェブ体験の構築に情熱を持っています。すべてのプロジェクトが新しい学びであり、一つのコンポーネントずつ成長することにコミットしています。",
+    "downloadResume": "履歴書をダウンロード",
+    "backPortfolio": "← ポートフォリオに戻る",
+    "workExperience": "職務経歴",
+    "education": "学歴",
+    "certificates": "資格"
+  },
+  "footer": { "text": "フィリピン、セブで心を込めて制作" },
+  "floatingMenu": {
+    "theme": "テーマ",
+    "language": "言語",
+    "light": "ライト",
+    "dark": "ダーク",
+    "system": "システム"
+  }
+}

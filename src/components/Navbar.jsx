@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const isAboutMe = location.pathname === "/aboutMe";
+  const { t } = useTranslation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -28,15 +30,15 @@ function Navbar() {
   
 
   const homeLinks = [
-    { id: "projects", label: "Projects" },
-    { id: "skills",   label: "Skills" },
-    { id: "contact",  label: "Contact" },
+    { id: "projects", label: t("nav.projects") },
+    { id: "skills",   label: t("nav.skills") },
+    { id: "contact",  label: t("nav.contact") },
   ];
 
   const aboutLinks = [
-    { id: "work-experience",        label: "Work Experience" },
-    { id: "educational-background", label: "Education" },
-    { id: "certificates",           label: "Certificates" },
+    { id: "work-experience",        label: t("nav.workExperience") },
+    { id: "educational-background", label: t("nav.education") },
+    { id: "certificates",           label: t("nav.certificates") },
   ];
 
   const navLinks = isAboutMe ? aboutLinks : homeLinks;
@@ -44,7 +46,7 @@ function Navbar() {
   return (
     <div className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
       <nav
-        className={`w-full max-w-[720px] rounded-2xl border border-[#D9D4C9] bg-[#F7F5F0]/80 backdrop-blur-md transition-all duration-300 ${
+        className={`w-full max-w-[720px] rounded-2xl border border-[#D9D4C9] bg-[#F7F5F0]/80 dark:bg-[#1A1814]/80 border-[#D9D4C9] dark:border-[#2A2520] backdrop-blur-md transition-all duration-300 ${
           scrolled
             ? "shadow-[0_8px_32px_rgba(0,0,0,0.10)]"
             : "shadow-[0_2px_12px_rgba(0,0,0,0.05)]"
@@ -53,7 +55,7 @@ function Navbar() {
         {/* ── Top row ── */}
         <div className="flex items-center justify-between px-5 py-3">
           {/* Logo or name only */} {/* No Navlink or Link */}
-        <span className="font-serif text-lg text-[#1A1814]">Leobert Camoro</span> 
+        <span className="font-serif text-lg text-[#1A1814] dark:text-[#F7F5F0]">Leobert Camoro</span> 
 
           {/* v1, with NavLink */}
           {/* <NavLink
@@ -86,7 +88,7 @@ function Navbar() {
               <li key={link.id}>
                 <a
                   href={`#${link.id}`}
-                  className="text-sm font-medium text-[#7A7468] no-underline px-3 py-1.5 rounded-lg hover:bg-[#EDEAE3] hover:text-[#1A1814] transition-all duration-150"
+                  className="text-sm font-medium text-[#7A7468] dark:text-[#A09890] hover:text-[#1A1814] dark:hover:text-[#F7F5F0] hover:bg-[#EDEAE3] dark:hover:bg-[#2A2520] no-underline px-3 py-1.5 rounded-lg hover:bg-[#EDEAE3] hover:text-[#1A1814] transition-all duration-150"
                 >
                   {link.label}
                 </a>
@@ -97,7 +99,7 @@ function Navbar() {
                 to={isAboutMe ? "/" : "/aboutMe"}
                 className="text-sm font-medium no-underline px-3 py-1.5 rounded-lg bg-[#1A1814] text-[#F7F5F0] hover:opacity-85 transition-all duration-150 ml-2"
               >
-                {isAboutMe ? "← Portfolio" : "About Me"}
+                {isAboutMe ? t("nav.back") : t("nav.aboutMe")}
               </NavLink>
             </li>
           </ul>
@@ -108,7 +110,7 @@ function Navbar() {
               to={isAboutMe ? "/" : "/aboutMe"}
               className="text-xs font-medium no-underline px-3 py-1.5 rounded-lg bg-[#1A1814] text-[#F7F5F0] hover:opacity-85 transition-all duration-150"
             >
-              {isAboutMe ? "← Back" : "About Me"}
+              {isAboutMe ? t("nav.back") : t("nav.aboutMe")}
             </NavLink>
 
             {/* Hamburger button */}

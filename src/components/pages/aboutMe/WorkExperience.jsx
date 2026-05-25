@@ -1,11 +1,13 @@
 import SectionEyebrow from "../../SectionEyebrow";
 import Tag from "./Tag";
 import { WORK_EXPERIENCE } from "./aboutMeData";
+import { useTranslation } from "react-i18next";
 
 function WorkExperience() {
+  const { t } = useTranslation();
   return (
     <section id="work-experience" className="max-w-[860px] mx-auto px-10 py-12">
-      <SectionEyebrow>Work Experience</SectionEyebrow>
+      <SectionEyebrow>{t("aboutMe.workExperience")}</SectionEyebrow>
       <div className="grid grid-cols-1 gap-4">
         {WORK_EXPERIENCE.map((job) => (
           <div key={job.id} className="bg-white border border-[#D9D4C9] rounded-[14px] p-6 hover:shadow-[0_6px_24px_rgba(0,0,0,0.07)] hover:-translate-y-[2px] transition-all duration-200">

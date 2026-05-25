@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "aboutMe": "About Me",
+    "back": "← Portfolio",
+    "workExperience": "Work Experience",
+    "education": "Education",
+    "certificates": "Certificates"
+  },
+  "hero": {
+    "badge": "Open to work",
+    "title": "Hi, I'm",
+    "role": "a React.JS developer.",
+    "bio": "I'm an AI-assisted, beginner developer who crafts accessible, and visually refined web experiences. With a deep commitment to clean code and intuitive UI, I focus on building solutions that genuinely make people's lives easier.",
+    "location": "Cebu City, Philippines",
+    "getInTouch": "Get in touch ↗",
+    "viewWork": "View my work"
+  },
+  "projects": {
+    "title": "Projects"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "contact": {
+    "title": "Let's work together",
+    "subtitle": "Open to freelance projects, collaborations, and full-time roles.",
+    "email": "Email",
+    "sendMessage": "Send a message",
+    "name": "Name",
+    "emailField": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message ↗",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Something went wrong. Try again.",
+    "namePlaceholder": "Your full name",
+    "emailPlaceholder": "your@email.com",
+    "subjectPlaceholder": "What's this about?",
+    "messagePlaceholder": "Tell me about your project or opportunity..."
+  },
+  "aboutMe": {
+    "badge": "Open to work · Cebu City, PH",
+    "role": "Frontend Developer · React JS Enthusiast",
+    "bio": "I am a beginner on my React JS journey, passionate about building clean and accessible web experiences. Every project is a new lesson, and I am committed to growing one component at a time.",
+    "downloadResume": "Download Resume",
+    "backPortfolio": "← Back to Portfolio",
+    "workExperience": "Work Experience",
+    "education": "Educational Background",
+    "certificates": "Certificates"
+  },
+  "footer": {
+    "text": "Built with care in Cebu, PH"
+  },
+  "floatingMenu": {
+    "theme": "Theme",
+    "language": "Language",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  }
+}

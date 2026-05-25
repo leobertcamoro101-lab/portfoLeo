@@ -6,6 +6,7 @@ function InputField({
   onChange,
   placeholder,
   required,
+  error,
 }) {
   return (
     <div className="flex flex-col gap-1.5">
@@ -19,8 +20,15 @@ function InputField({
         onChange={onChange}
         placeholder={placeholder}
         required={required}
-        className="w-full px-4 py-2.5 text-sm text-[#1A1814] bg-[#F7F5F0] border border-[#D9D4C9] rounded-lg outline-none focus:border-[#2D5BE3] focus:ring-2 focus:ring-[#2D5BE3]/20 transition-all duration-150 placeholder:text-[#C4BFB6]"
+        className={`w-full px-4 py-2.5 text-sm text-[#1A1814] bg-[#F7F5F0] border rounded-lg outline-none focus:ring-2 transition-all duration-150 placeholder:text-[#C4BFB6] ${
+          error
+            ? "border-red-500 focus:border-red-500 focus:ring-red-200"
+            : "border-[#D9D4C9] focus:border-[#2D5BE3] focus:ring-[#2D5BE3]/20"
+        }`}
       />
+      {error && (
+        <p className="text-xs text-red-600 font-medium">{error}</p>
+      )}
     </div>
   );
 }

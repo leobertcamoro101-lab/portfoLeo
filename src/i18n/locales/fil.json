@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "projects": "Mga Proyekto",
+    "skills": "Mga Kasanayan",
+    "contact": "Makipag-ugnayan",
+    "aboutMe": "Tungkol sa Akin",
+    "back": "← Portfolio",
+    "workExperience": "Karanasan sa Trabaho",
+    "education": "Edukasyon",
+    "certificates": "Mga Sertipiko"
+  },
+  "hero": {
+    "badge": "Bukas sa trabaho",
+    "title": "Kumusta, ako si",
+    "role": "isang React.JS developer.",
+    "bio": "Ako ay isang baguhan na developer na gumagawa ng accessible at visually refined na web experiences. Sa aking dedikasyon sa malinis na code at intuitive na UI, nakatutok ako sa pagbuo ng mga solusyong tunay na nagpapadali ng buhay ng mga tao.",
+    "location": "Cebu City, Pilipinas",
+    "getInTouch": "Makipag-ugnayan ↗",
+    "viewWork": "Tingnan ang aking gawa"
+  },
+  "projects": { "title": "Mga Proyekto" },
+  "skills": { "title": "Mga Kasanayan" },
+  "contact": {
+    "title": "Magtulungan tayo",
+    "subtitle": "Bukas sa freelance, kolaborasyon, at full-time na trabaho.",
+    "email": "Email",
+    "sendMessage": "Magpadala ng mensahe",
+    "name": "Pangalan",
+    "emailField": "Email",
+    "subject": "Paksa",
+    "message": "Mensahe",
+    "send": "Ipadala ↗",
+    "sending": "Nagpapadala...",
+    "success": "Matagumpay na naipadala ang mensahe!",
+    "error": "May naganap na error. Subukan muli.",
+    "namePlaceholder": "Iyong buong pangalan",
+    "emailPlaceholder": "iyong@email.com",
+    "subjectPlaceholder": "Ano ito?",
+    "messagePlaceholder": "Sabihin sa akin ang tungkol sa iyong proyekto..."
+  },
+  "aboutMe": {
+    "badge": "Bukas sa trabaho · Cebu City, PH",
+    "role": "Frontend Developer · React JS Enthusiast",
+    "bio": "Ako ay isang baguhan sa aking paglalakbay sa React JS, masigasig sa pagbuo ng malinis at accessible na web experiences. Bawat proyekto ay bagong aral, at nakatuon ako sa paglago nang isang component sa isang pagkakataon.",
+    "downloadResume": "I-download ang Resume",
+    "backPortfolio": "← Bumalik sa Portfolio",
+    "workExperience": "Karanasan sa Trabaho",
+    "education": "Pinag-aralan",
+    "certificates": "Mga Sertipiko"
+  },
+  "footer": { "text": "Ginawa nang may pagmamahal sa Cebu, PH" },
+  "floatingMenu": {
+    "theme": "Tema",
+    "language": "Wika",
+    "light": "Maliwanag",
+    "dark": "Madilim",
+    "system": "Sistema"
+  }
+}

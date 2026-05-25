@@ -1,10 +1,12 @@
 import SectionEyebrow from "../../SectionEyebrow";
 import { EDUCATION } from "./aboutMeData";
+import { useTranslation } from "react-i18next";
 
 function Education() {
+  const { t } = useTranslation();
   return (
     <section id="educational-background" className="max-w-[860px] mx-auto px-10 py-12">
-      <SectionEyebrow>Educational Background</SectionEyebrow>
+      <SectionEyebrow>{t("aboutMe.education")}</SectionEyebrow>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {EDUCATION.map((edu) => (
           <div key={edu.id} className="bg-white border border-[#D9D4C9] rounded-[14px] p-6 hover:shadow-[0_6px_24px_rgba(0,0,0,0.07)] hover:-translate-y-[2px] transition-all duration-200">

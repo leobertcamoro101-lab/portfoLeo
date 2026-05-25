@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import ProfileImage from "../../../assets/profile.jpg";
+import { useTranslation } from "react-i18next";
 function ProfileHero() {
+  const { t } = useTranslation();
+
   return (
     <div className="animate-[fadeUp_0.5s_ease_both] [animation-delay:0.05s] max-w-[860px] mx-auto px-10 pt-16 pb-12 ">
       <div className=" flex flex-col sm:flex-row items-center sm:items-start gap-8 p-12">
@@ -14,7 +17,7 @@ function ProfileHero() {
         <div className="flex-1 text-center sm:text-left">
           <div className="inline-flex items-center gap-1.5 text-xs font-medium text-[#2A7A4B] bg-[#E4F2EB] border border-[#BBE3CE] rounded-full px-3 py-1 mb-3">
             <span className="w-[7px] h-[7px] bg-[#2A7A4B] rounded-full inline-block" />
-            Open to work · Hybrid · Remote · Cebu City, PH
+            {t("aboutMe.badge")}
           </div>
 
           <h1 className="font-serif text-[36px] leading-[1.1] tracking-[-0.02em] text-[#1A1814] mb-2">
@@ -22,13 +25,11 @@ function ProfileHero() {
           </h1>
 
           <p className="text-[15px] text-[#2D5BE3] font-medium mb-3">
-            React JS Developer · React JS Enthusiast
+            {t("aboutMe.role")}
           </p>
 
           <p className="text-[15px] text-[#7A7468] leading-[1.75] max-w-[480px] mb-6">
-            I am a beginner on my React JS journey, passionate about building
-            clean and accessible web experiences. Every project is a new lesson,
-            and I am committed to growing one component at a time.
+            {t("aboutMe.bio")}
           </p>
 
           <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
@@ -42,10 +43,10 @@ function ProfileHero() {
                 <polyline points="7 10 12 15 17 10"/>
                 <line x1="12" y1="15" x2="12" y2="3"/>
               </svg>
-              Download Resume
+              {t("aboutMe.downloadResume")}
             </a>
             <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-lg bg-[#F7F5F0] text-[#1A1814] border border-[#D9D4C9] hover:bg-[#EDEAE3] transition-all duration-150 no-underline">
-              ← Back to Portfolio
+              {t("aboutMe.backPortfolio")}
             </Link>
           </div>
         </div>

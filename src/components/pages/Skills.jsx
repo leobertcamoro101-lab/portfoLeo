@@ -1,10 +1,13 @@
 import SectionEyebrow from '../SectionEyebrow';
 import { SKILLS } from '../data'
+import { useTranslation } from "react-i18next";
 
 function Skills() {
+  const { t } = useTranslation();
+
   return (
     <section id="skills" className=" max-w-[860px] mx-auto px-10 py-14 ">
-      <SectionEyebrow>Skills</SectionEyebrow>
+      <SectionEyebrow>{t("skills.title")}</SectionEyebrow>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(170px,1fr))] gap-3">
         {SKILLS.map((group) => (
           <div
