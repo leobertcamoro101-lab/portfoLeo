@@ -10,7 +10,7 @@ function Contact() {
     <section id="contact" className="max-w-[860px] mx-auto px-5 sm:px-10 py-14">
 
       {/* ── Top dark CTA box ── */}
-      <div className="bg-[#1A1814] text-[#F7F5F0] rounded-2xl px-5 sm:px-8 py-10 sm:py-12 text-center mb-4">
+      <div className="bg-[#1A1814] dark:bg-[#F7F5F0] text-[#F7F5F0] dark:text-[#1A1814] rounded-2xl px-5 sm:px-8 py-10 sm:py-12 text-center mb-4">
         <h2 className="font-serif text-[24px] sm:text-[30px] tracking-[-0.01em] mb-2">
           {t("contact.title")}
         </h2>

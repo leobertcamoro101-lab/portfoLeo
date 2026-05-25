@@ -28,15 +28,46 @@ export const contactFormSchema = z.object({
 });
 
 export const validateForm = (formData) => {
+  // ✅ Guard — make sure formData exists and is an object
+  if (!formData || typeof formData !== "object") {
+    return {
+      valid: false,
+      errors: { general: "Form data is missing." },
+    };
+  }
+
   try {
     contactFormSchema.parse(formData);
     return { valid: true, errors: {} };
   } catch (error) {
     const errors = {};
-    error.errors.forEach((err) => {
-      const path = err.path[0];
-      errors[path] = err.message;
-    });
+
+    // ✅ Guard — make sure error.errors exists and is an array
+    if (error?.errors && Array.isArray(error.errors)) {
+      error.errors.forEach((err) => {
+        const path = err.path[0];
+        if (path) {
+          errors[path] = err.message;
+        }
+      });
+    } else {
+      // Fallback if Zod error structure is unexpected
+      errors.general = "Validation failed. Please check your inputs.";
+    }
+
     return { valid: false, errors };
   }
 };
+// export const validateForm = (formData) => {
+//   try {
+//     contactFormSchema.parse(formData);
+//     return { valid: true, errors: {} };
+//   } catch (error) {
+//     const errors = {};
+//     error.errors.forEach((err) => {
+//       const path = err.path[0];
+//       errors[path] = err.message;
+//     });
+//     return { valid: false, errors };
+//   }
+// };

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function LinkButton({ to, variant = "default", children }) {
   const variantClasses = {
-    default: "bg-[#F7F5F0] text-[#1A1814] border border-[#D9D4C9] hover:bg-[#EDEAE3]",
+    default: "bg-[#F7F5F0] text-[#1A1814] dark:bg-[#1A1814] dark:text-[#F7F5F0] border border-[#D9D4C9] hover:bg-[#EDEAE3] dark:hover:bg-[#2A2520]",
     primary: "bg-[#1A1814] text-[#F7F5F0] border border-transparent hover:opacity-85",
     white:   "bg-white text-[#1A1814] border border-transparent hover:bg-gray-100",
     ghost:   "bg-white/10 text-white border border-white/15 hover:bg-white/20",

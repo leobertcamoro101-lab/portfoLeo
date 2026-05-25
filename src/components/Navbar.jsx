@@ -97,7 +97,7 @@ function Navbar() {
             <li>
               <NavLink
                 to={isAboutMe ? "/" : "/aboutMe"}
-                className="text-sm font-medium no-underline px-3 py-1.5 rounded-lg bg-[#1A1814] text-[#F7F5F0] hover:opacity-85 transition-all duration-150 ml-2"
+                className="text-sm font-medium no-underline px-3 py-1.5 rounded-lg bg-[#1A1814] text-[#F7F5F0] dark:bg-[#F7F5F0] dark:text-[#1A1814] hover:opacity-85 transition-all duration-150 ml-2"
               >
                 {isAboutMe ? t("nav.back") : t("nav.aboutMe")}
               </NavLink>

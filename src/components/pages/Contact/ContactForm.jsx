@@ -80,7 +80,7 @@ function ContactForm() {
     }
   };
   return (
-    <div className="bg-white border border-[#D9D4C9] rounded-2xl px-5 sm:px-8 py-8">
+    <div className="bg-white dark:bg-[#1A1814] border border-[#D9D4C9] dark:border-[#2A2520] rounded-2xl px-5 sm:px-8 py-8">
       <p className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#7A7468] mb-6">
         {t("contact.sendMessage")}
       </p>
@@ -174,8 +174,8 @@ function ContactForm() {
             disabled={status === "loading"}
             className={`w-full sm:w-auto inline-flex justify-center items-center gap-2 text-sm font-medium px-6 py-2.5 rounded-lg transition-all duration-150 ${
               status === "loading"
-                ? "bg-[#EDEAE3] text-[#7A7468] cursor-not-allowed"
-                : "bg-[#1A1814] text-[#F7F5F0] hover:opacity-85 cursor-pointer"
+                ? "bg-[#EDEAE3] dark:bg-[#7A7468] text-[#7A7468] dark:text-[#EDEAE3] cursor-not-allowed"
+                : "bg-[#1A1814] dark:bg-[#F7F5F0] text-[#F7F5F0] dark:text-[#1A1814] hover:opacity-85 cursor-pointer"
             }`}
           >
             {status === "loading" ? (
@@ -208,7 +208,7 @@ function ContactForm() {
 
           {/* Success message */}
           {status === "success" && (
-            <div className="w-full sm:w-auto p-3 bg-green-50 border border-green-300 rounded-lg">
+            <div className="w-full sm:w-auto p-3 bg-green-50 dark:bg-green-900 border border-green-300 dark:border-green-600 rounded-lg">
               <p className="text-sm text-green-700 font-medium flex items-center justify-center sm:justify-start gap-2">
                 <span>✓</span> <span className="hidden sm:inline">{t("contact.success")}</span>
                 <span className="sm:hidden">{t("contact.success")}</span>
