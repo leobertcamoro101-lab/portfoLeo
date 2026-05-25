@@ -8,7 +8,7 @@ import ScrollToTopButton from "../ScrollToTopButton";
 
 function AboutMe(){
     return (
-    <div className="font-sans bg-[#F7F5F0] text-[#1A1814] min-h-screen">
+    <div className="font-sans bg-[#F7F5F0] dark:bg-[#1A1814] text-[#1A1814] dark:text-[#F7F5F0] min-h-screen">
       <ProfileHero />
       <Divider />
       <WorkExperience />

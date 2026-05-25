@@ -20,7 +20,7 @@ function ProfileHero() {
             {t("aboutMe.badge")}
           </div>
 
-          <h1 className="font-serif text-[36px] leading-[1.1] tracking-[-0.02em] text-[#1A1814] mb-2">
+          <h1 className="font-serif text-[36px] leading-[1.1] tracking-[-0.02em] text-[#1A1814] dark:text-[#F7F5F0] mb-2">
             Leobert Camoro
           </h1>
 
@@ -36,7 +36,7 @@ function ProfileHero() {
             <a
               href="/resume.pdf"
               download
-              className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-lg bg-[#1A1814] text-[#F7F5F0] hover:opacity-85 transition-all duration-150 no-underline"
+              className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-lg bg-[#1A1814] dark:bg-[#F7F5F0] text-[#F7F5F0] dark:text-[#1A1814] hover:opacity-85 transition-all duration-150 no-underline"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
@@ -45,7 +45,7 @@ function ProfileHero() {
               </svg>
               {t("aboutMe.downloadResume")}
             </a>
-            <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-lg bg-[#F7F5F0] text-[#1A1814] border border-[#D9D4C9] hover:bg-[#EDEAE3] transition-all duration-150 no-underline">
+            <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-lg bg-[#F7F5F0] dark:bg-[#1A1814] dark:text-[#F7F5F0] text-[#1A1814] border border-[#D9D4C9] hover:bg-[#EDEAE3] dark:hover:bg-[#2C2A24] transition-all duration-150 no-underline">
               {t("aboutMe.backPortfolio")}
             </Link>
           </div>
