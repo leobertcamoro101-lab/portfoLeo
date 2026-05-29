@@ -1,4 +1,4 @@
-function Button({ href, variant = "default", children }) {
+function Button({ onClick, href, variant = "default", children }) {
   const variantClasses = {
     default: "bg-[#F7F5F0] text-[#1A1814] dark:bg-[#1A1814] dark:text-[#F7F5F0] border border-[#D9D4C9] hover:bg-[#EDEAE3] dark:hover:bg-[#2A2520]",
     primary: "bg-[#1A1814] text-[#F7F5F0] dark:bg-[#F7F5F0] dark:text-[#1A1814] border border-transparent hover:opacity-85 dark:hover:opacity-85",
@@ -8,6 +8,7 @@ function Button({ href, variant = "default", children }) {
 
   return (
     <a
+      onClick={onClick}
       href={href}
       target={href?.startsWith("http") ? "_blank" : undefined}
       rel="noreferrer"

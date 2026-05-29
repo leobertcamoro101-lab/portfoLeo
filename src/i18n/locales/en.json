@@ -40,7 +40,8 @@
     "namePlaceholder": "Your full name",
     "emailPlaceholder": "your@email.com",
     "subjectPlaceholder": "What's this about?",
-    "messagePlaceholder": "Tell me about your project or opportunity..."
+    "messagePlaceholder": "Tell me about your project or opportunity...",
+    "phone": "Call me"
   },
   "aboutMe": {
     "badge": "Open to work · Cebu City, PH",

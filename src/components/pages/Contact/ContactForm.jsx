@@ -1,33 +1,34 @@
-import InputField from "./InputField";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { ERROR_CATEGORIES, categorizeError } from "../../CategorizedError";
-import { validateForm } from "./formValidation";
 import { useTranslation } from "react-i18next";
+import { categorizeError, ERROR_CATEGORIES } from "./CategorizedError";
+import { validateForm } from "./formValidation";
+import FormErrorAlert from "./FormErrorAlert";
+import FormFields from "./FormFields";
+import MessageField from "./MessageField";
+import SubmitButton from "./SubmitButton";
+
+const INITIAL_FORM = {
+  from_name: "",
+  from_email: "",
+  subject: "",
+  message: "",
+};
 
 function ContactForm() {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   const formRef = useRef();
-  const [form, setForm] = useState({
-    from_name: "",
-    from_email: "",
-    subject: "",
-    message: "",
-  });
-  const [status, setStatus] = useState("idle"); // idle | loading | success | error
-  const [errorInfo, setErrorInfo] = useState(null); // Stores general error details
-  const [fieldErrors, setFieldErrors] = useState({}); // Stores field-specific validation errors
+  const [form, setForm] = useState(INITIAL_FORM);
+  const [status, setStatus] = useState("idle");
+  const [errorInfo, setErrorInfo] = useState(null);
+  const [fieldErrors, setFieldErrors] = useState({});
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
-    // Clear field error when user modifies it
     if (fieldErrors[e.target.name]) {
       setFieldErrors({ ...fieldErrors, [e.target.name]: null });
     }
-    // Clear general error when user modifies the form
-    if (errorInfo) {
-      setErrorInfo(null);
-    }
+    if (errorInfo) setErrorInfo(null);
   };
 
   const handleSubmit = async (e) => {
@@ -36,7 +37,6 @@ function ContactForm() {
     setErrorInfo(null);
     setFieldErrors({});
 
-    // Validate form using Zod schema
     const validation = validateForm(form);
     if (!validation.valid) {
       setStatus("idle");
@@ -49,10 +49,9 @@ function ContactForm() {
     }
 
     try {
-      // Check if EmailJS is configured
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const serviceId  = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      const publicKey  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
       if (!serviceId || !templateId || !publicKey) {
         throw new Error("Email service not configured");
@@ -61,166 +60,51 @@ function ContactForm() {
       await emailjs.sendForm(serviceId, templateId, formRef.current, publicKey);
 
       setStatus("success");
-      setForm({ from_name: "", from_email: "", subject: "", message: "" });
-
-      // Auto-clear success after 5 seconds
+      setForm(INITIAL_FORM);
       setTimeout(() => setStatus("idle"), 5000);
+
     } catch (error) {
-      // Log error details for debugging
       console.error("Email Error:", {
         message: error.message,
         status: error.status,
         timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
       });
-
-      const errorData = categorizeError(error);
-      setErrorInfo(errorData);
+      setErrorInfo(categorizeError(error));
       setStatus("error");
     }
   };
+
   return (
     <div className="bg-white dark:bg-[#1A1814] border border-[#D9D4C9] dark:border-[#2A2520] rounded-2xl px-5 sm:px-8 py-8">
       <p className="text-[11px] font-medium uppercase tracking-[0.1em] text-[#7A7468] mb-6">
         {t("contact.sendMessage")}
       </p>
 
-      <form
-        ref={formRef}
-        onSubmit={handleSubmit}
-        className="flex flex-col gap-4"
-      >
-        {/* Error Alert */}
-        {errorInfo && (
-          <div className="p-4 bg-red-50 border-l-4 border-red-500 rounded-lg">
-            <div className="flex gap-3">
-              <span className="text-2xl">{errorInfo.category.icon}</span>
-              <div className="flex-1">
-                <p className="font-semibold text-red-900 mb-1">
-                  {errorInfo.category.title}
-                </p>
-                <p className="text-red-700 text-sm mb-2">{errorInfo.message}</p>
-                {errorInfo.category.recoverable && (
-                  <p className="text-xs text-red-600 italic">
-                    💡 Tip: Try checking your connection and submitting again.
-                  </p>
-                )}
-              </div>
-            </div>
-          </div>
-        )}
+      <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-4">
 
-        {/* Name + Email row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <InputField
-            label={t("contact.name")}
-            name="from_name"
-            value={form.from_name}
-            onChange={handleChange}
-            placeholder={t("contact.namePlaceholder")}
-            required
-            error={fieldErrors.from_name}
-          />
-          <InputField
-            label={t("contact.email")}
-            type="email"
-            name="from_email"
-            value={form.from_email}
-            onChange={handleChange}
-            placeholder={t("contact.emailPlaceholder")}
-            required
-            error={fieldErrors.from_email}
-          />
-        </div>
+        {/* Error alert */}
+        <FormErrorAlert errorInfo={errorInfo} />
 
-        {/* Subject */}
-        <InputField
-          label={t("contact.subject")}
-          name="subject"
-          value={form.subject}
+        {/* Name, Email, Subject fields */}
+        <FormFields
+          form={form}
+          fieldErrors={fieldErrors}
           onChange={handleChange}
-          placeholder={t("contact.subjectPlaceholder")}
-          required
-          error={fieldErrors.subject}
         />
 
-        {/* Message */}
-        <div className="flex flex-col gap-1.5">
-          <label className="text-[12px] font-medium uppercase tracking-[0.08em] text-[#7A7468]">
-            {t("contact.message")} <span className="text-[#2D5BE3]">*</span>
-          </label>
-          <textarea
-            name="message"
-            value={form.message}
-            onChange={handleChange}
-            placeholder={t("contact.messagePlaceholder")}
-            required
-            rows={5}
-            className={`w-full px-4 py-2.5 text-sm text-[#1A1814] bg-[#F7F5F0] border rounded-lg outline-none focus:ring-2 transition-all duration-150 placeholder:text-[#C4BFB6] resize-none ${
-              fieldErrors.message
-                ? "border-red-500 focus:border-red-500 focus:ring-red-200"
-                : "border-[#D9D4C9] focus:border-[#2D5BE3] focus:ring-[#2D5BE3]/20"
-            }`}
-          />
-          {fieldErrors.message && (
-            <p className="text-xs text-red-600 font-medium">{fieldErrors.message}</p>
-          )}
-        </div>
+        {/* Message textarea */}
+        <MessageField
+          value={form.message}
+          onChange={handleChange}
+          error={fieldErrors.message}
+        />
 
-        {/* Submit button */}
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-2">
-          <button
-            type="submit"
-            disabled={status === "loading"}
-            className={`w-full sm:w-auto inline-flex justify-center items-center gap-2 text-sm font-medium px-6 py-2.5 rounded-lg transition-all duration-150 ${
-              status === "loading"
-                ? "bg-[#EDEAE3] dark:bg-[#7A7468] text-[#7A7468] dark:text-[#EDEAE3] cursor-not-allowed"
-                : "bg-[#1A1814] dark:bg-[#F7F5F0] text-[#F7F5F0] dark:text-[#1A1814] hover:opacity-85 cursor-pointer"
-            }`}
-          >
-            {status === "loading" ? (
-              <>
-                <svg
-                  className="animate-spin w-4 h-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <circle
-                    className="opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                  />
-                  <path
-                    className="opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8v8H4z"
-                  />
-                </svg>
-                {t("contact.sending")}
-              </>
-            ) : (
-              t("contact.send")
-            )}
-          </button>
+        {/* Submit + success */}
+        <SubmitButton status={status} />
 
-          {/* Success message */}
-          {status === "success" && (
-            <div className="w-full sm:w-auto p-3 bg-green-50 dark:bg-green-900 border border-green-300 dark:border-green-600 rounded-lg">
-              <p className="text-sm text-green-700 font-medium flex items-center justify-center sm:justify-start gap-2">
-                <span>✓</span> <span className="hidden sm:inline">{t("contact.success")}</span>
-                <span className="sm:hidden">{t("contact.success")}</span>
-              </p>
-            </div>
-          )}
-        </div>
       </form>
     </div>
   );
 }
 
 export default ContactForm;
-// Message sent successfully! We'll get back to you soon.
-// Message sent!

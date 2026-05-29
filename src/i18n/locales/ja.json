@@ -36,7 +36,8 @@
     "namePlaceholder": "お名前を入力してください",
     "emailPlaceholder": "メールアドレス",
     "subjectPlaceholder": "件名を入力してください",
-    "messagePlaceholder": "プロジェクトや機会についてお知らせください"
+    "messagePlaceholder": "プロジェクトや機会についてお知らせください",
+    "phone": "電話する"
   },
   "aboutMe": {
     "badge": "仕事募集中・フィリピン、セブ市",
