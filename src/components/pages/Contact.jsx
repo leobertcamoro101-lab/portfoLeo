@@ -68,7 +68,7 @@ function Contact() {
               LinkedIn
             </Button>
             <Button onClick={() => setIsOpen(true)} variant="white">
-              Message Me
+              {t("contact.messageMe")}
             </Button>
           </div>
         </div>
