@@ -13,6 +13,7 @@ const INITIAL_FORM = {
   from_email: "",
   subject: "",
   message: "",
+  honeypot: "",
 };
 
 function ContactForm() {
@@ -22,6 +23,8 @@ function ContactForm() {
   const [status, setStatus] = useState("idle");
   const [errorInfo, setErrorInfo] = useState(null);
   const [fieldErrors, setFieldErrors] = useState({});
+  const [lastSubmit, setLastSubmit] = useState(null);
+  const COOLDOWN_MS = 60000; // 1 minute
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -33,6 +36,24 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // ✅ Honeypot check
+    if (form.honeypot) {
+      setStatus("success"); // fake success — bot won't know
+      return;
+    }
+
+    // ✅ Rate limit check
+    if (lastSubmit && Date.now() - lastSubmit < COOLDOWN_MS) {
+      const secondsLeft = Math.ceil(
+        (COOLDOWN_MS - (Date.now() - lastSubmit)) / 1000,
+      );
+      setErrorInfo({
+        category: ERROR_CATEGORIES.RATE_LIMIT,
+        message: `Please wait ${secondsLeft} seconds before sending another message.`,
+      });
+      return;
+    }
     setStatus("loading");
     setErrorInfo(null);
     setFieldErrors({});
@@ -49,9 +70,9 @@ function ContactForm() {
     }
 
     try {
-      const serviceId  = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-      const publicKey  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
       if (!serviceId || !templateId || !publicKey) {
         throw new Error("Email service not configured");
@@ -62,7 +83,6 @@ function ContactForm() {
       setStatus("success");
       setForm(INITIAL_FORM);
       setTimeout(() => setStatus("idle"), 5000);
-
     } catch (error) {
       console.error("Email Error:", {
         message: error.message,
@@ -72,6 +92,8 @@ function ContactForm() {
       setErrorInfo(categorizeError(error));
       setStatus("error");
     }
+    // Set last submit time after success
+    setLastSubmit(Date.now());
   };
 
   return (
@@ -80,8 +102,11 @@ function ContactForm() {
         {t("contact.sendMessage")}
       </p>
 
-      <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-4">
-
+      <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-4"
+      >
         {/* Error alert */}
         <FormErrorAlert errorInfo={errorInfo} />
 
@@ -99,9 +124,19 @@ function ContactForm() {
           error={fieldErrors.message}
         />
 
+        <input
+          type="text"
+          name="honeypot"
+          value={form.honeypot || ""}
+          onChange={handleChange}
+          style={{ display: "none" }}
+          tabIndex="-1"
+          autoComplete="off"
+          aria-hidden="true"
+        />
+
         {/* Submit + success */}
         <SubmitButton status={status} />
-
       </form>
     </div>
   );

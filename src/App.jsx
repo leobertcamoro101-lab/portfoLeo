@@ -10,7 +10,7 @@ import RootLayout from "./components/pages/RootLayout";
 // import ScrollToTopButton from "./components/ScrollToTopButton";
 import AboutMe from "./components/pages/AboutMe";
 import Landing from "./components/pages/Landing";
-import useFonts from "./components/useFonts";
+import useFonts from "./components/useFonts"; //redundant
 
 //this is debug code
 // Paste this above your App function temporarily
@@ -49,7 +49,7 @@ function App(){
     },
   ]);
 
-  useFonts();
+  useFonts(); //redundant
 
   return (
     <RouterProvider router={router} />
