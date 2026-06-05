@@ -1,17 +1,22 @@
 import { Link } from "react-router-dom";
 import ProfileImage from "../../../assets/profile.jpg";
 import { useTranslation } from "react-i18next";
+import Avatar from "../../UI/Avatar";
+
 function ProfileHero() {
   const { t } = useTranslation();
 
   return (
     <div className="animate-[fadeUp_0.5s_ease_both] [animation-delay:0.05s] max-w-[860px] mx-auto px-10 pt-16 pb-12 ">
       <div className=" flex flex-col sm:flex-row items-center sm:items-start gap-8 p-12">
-
         {/* Avatar */}
-        <div className="w-[120px] h-[120px] rounded-full border-2 border-[#D9D4C9] shrink-0 overflow-hidden shadow-md">
-          <img src={ProfileImage} alt="Leobert Camoro" className="w-full h-full object-cover" />
-        </div>
+        <Avatar
+          image={ProfileImage}
+          alt="Leobert Camoro"
+          size="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px]" // ← responsive!
+          className="border-2 border-[#D9D4C9] shadow-md"
+          // style={{ borderRadius: "12px" }} 
+        />
 
         {/* Info */}
         <div className="flex-1 text-center sm:text-left">
@@ -38,14 +43,26 @@ function ProfileHero() {
               download
               className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-lg bg-[#1A1814] dark:bg-[#F7F5F0] text-[#F7F5F0] dark:text-[#1A1814] hover:opacity-85 transition-all duration-150 no-underline"
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
               </svg>
               {t("aboutMe.downloadResume")}
             </a>
-            <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-lg bg-[#F7F5F0] dark:bg-[#1A1814] dark:text-[#F7F5F0] text-[#1A1814] border border-[#D9D4C9] hover:bg-[#EDEAE3] dark:hover:bg-[#2C2A24] transition-all duration-150 no-underline">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-lg bg-[#F7F5F0] dark:bg-[#1A1814] dark:text-[#F7F5F0] text-[#1A1814] border border-[#D9D4C9] hover:bg-[#EDEAE3] dark:hover:bg-[#2C2A24] transition-all duration-150 no-underline"
+            >
               {t("aboutMe.backPortfolio")}
             </Link>
           </div>
