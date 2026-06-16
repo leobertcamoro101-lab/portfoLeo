@@ -74,7 +74,7 @@ function Contact() {
         </div>
 
         {/* ── Contact form ── */}
-        <ContactForm />
+        {/* <ContactForm /> */}
       </section>
     </>
   );
