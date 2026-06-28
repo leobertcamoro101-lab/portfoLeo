@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfo-leo.vercel.app/sitemap.xml
+Sitemap: https://portfo-leo-puce.vercel.app/sitemap.xml
