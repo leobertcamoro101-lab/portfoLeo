@@ -1,20 +1,37 @@
 export const PROJECTS = [
 
   {
+    id: 2,
+    icon: "💰",
+    iconBg: "bg-[#E4F2EB]",
+    type: "udemy",
+    title: "Investly",
+    description:
+      "A React investment calculator app with Tailwind CSS v4, Framer Motion animations, and responsive design.",
+    tags: ["React", "Vite", "Tailwind CSS", "Framer Motion", "Vercel"],
+    liveUrl: "https://investly-eight.vercel.app/",
+    sourceUrl: "https://github.com/leobertcamoro101-lab/investly",
+  },
+  {
     id: 1,
     icon: "🌐",
     iconBg: "bg-[#EDEAE3]", 
+    type: "personal",
     title: "Portfolio Website",
     description:
       "My first personal portfolio website built with React, showcasing my projects and skills. It features a clean design, smooth animations, and responsive layout.",
-    tags: ["React", "React Router", "Tailwind CSS", "Vite", "Netlify", "Vercel"],
+    tags: ["React", "React Router", "Tailwind CSS", "Vite", "Netlify", "Vercel", "Framer Motion", "i18next"],
+    liveUrl: "https://portfo-leo-puce.vercel.app/",      // ← live demo
+    sourceUrl: "https://github.com/leobertcamoro101-lab/portfoLeo",
   },
 
 ];
 
 export const SKILLS = [
-  { category: "Frontend", items: ["React / Next.js", "Tailwind CSS", "vercel", "netlify"] },
-  { category: "Backend",  items: ["Node.js"] },
-  { category: "Database", items: ["PostgreSQL", "MongoDB", "firebase"] },
-  { category: "DevOps",   items: ["Docker", "Linux"] },
+  { category: "Frontend", items: ["HTML", "CSS", "Javascript","React", "Next.js", "Tailwind CSS", "Framer Motion", "i18next", "Zod"] },
+  { category: "Backend",  items: ["Node.js", "Express.js", "Mongoose", "Axios"] },
+  { category: "Database", items: ["PostgreSQL", "MongoDB", "firebase", "Cloudinary"] },
+  { category: "DevOps",   items: ["Docker", "Linux", "Git", "Firebase", "Vercel", "Netlify", "Render"] },
+  { category: "Testing",  items: ["Jest", "Vitest", "Postman"] },
+  { category: "Other",    items: ["NPM"] }
 ];

@@ -1,3 +1,8 @@
+import { motion } from "framer-motion";
+import { 
+  fadeUp, 
+  // popIn 
+} from "../../utils/animations";
 import { useState } from "react";
 import Button from "../UI/Button";
 import ContactForm from "./Contact/ContactForm";
@@ -24,7 +29,12 @@ function Contact() {
         className="max-w-[860px] mx-auto px-5 sm:px-10 py-14"
       >
         {/* ── Top dark CTA box ── */}
-        <div className="bg-[#1A1814] dark:bg-[#F7F5F0] text-[#F7F5F0] dark:text-[#1A1814] rounded-2xl px-5 sm:px-8 py-10 sm:py-12 text-center mb-4">
+        <motion.div 
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-80px" }}
+        className="bg-[#1A1814] dark:bg-[#F7F5F0] text-[#F7F5F0] dark:text-[#1A1814] rounded-2xl px-5 sm:px-8 py-10 sm:py-12 text-center mb-4">
           <h2 className="font-serif text-[24px] sm:text-[30px] tracking-[-0.01em] mb-2">
             {t("contact.title")}
           </h2>
@@ -71,10 +81,17 @@ function Contact() {
               {t("contact.messageMe")}
             </Button>
           </div>
-        </div>
+        </motion.div>
 
         {/* ── Contact form ── */}
-        {/* <ContactForm /> */}
+        {/* <motion.div
+        variants={popIn}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-80px" }}
+        >
+        <ContactForm />
+        </motion.div> */}
       </section>
     </>
   );
