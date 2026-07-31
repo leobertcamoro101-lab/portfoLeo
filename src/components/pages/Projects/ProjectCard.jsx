@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { popIn } from "../utils/animations";
+import { popIn } from "../../../utils/animations";
 import ProjectTypeBadge from "./ProjectTypeBadge";
 
 function ProjectCard({ project, index }) {

@@ -1,5 +1,16 @@
 export const PROJECTS = [
-
+  {
+    id: 3,
+    icon: "💰",
+    iconBg: "bg-[#E4F2EB]",
+    type: "udemy",
+    title: "Placepulse",
+    description:
+      "A web app where users can create accounts and log in, Browse users and view their listed places, Create, update, and manage place entries,Use authentication-protected routes for private actions (mern project)",
+    tags: ["React", "Vite", "Tailwind CSS", "Vercel"],
+    liveUrl: "https://placepulse-updated.vercel.app/",
+    sourceUrl: "https://github.com/leobertcamoro101-lab/placepulse-updated",
+  },
   {
     id: 2,
     icon: "💰",
@@ -28,8 +39,8 @@ export const PROJECTS = [
 ];
 
 export const SKILLS = [
-  { category: "Frontend", items: ["HTML", "CSS", "Javascript","React", "Next.js", "Tailwind CSS", "Framer Motion", "i18next", "Zod"] },
-  { category: "Backend",  items: ["Node.js", "Express.js", "Mongoose", "Axios"] },
+  { category: "Frontend", items: ["HTML", "CSS", "Javascript","React", "Tailwind CSS", "Framer Motion", "i18next", "Zod"] },
+  { category: "Backend",  items: ["Node.js", "Express.js", "Mongoose", "multer", "Axios"] },
   { category: "Database", items: ["PostgreSQL", "MongoDB", "firebase", "Cloudinary"] },
   { category: "DevOps",   items: ["Docker", "Linux", "Git", "Firebase", "Vercel", "Netlify", "Render"] },
   { category: "Testing",  items: ["Jest", "Vitest", "Postman"] },

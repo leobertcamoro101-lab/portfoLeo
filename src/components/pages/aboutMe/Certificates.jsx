@@ -21,7 +21,10 @@ function Certificates() {
           <SectionEyebrow>{t("aboutMe.certificates")}</SectionEyebrow>
         </AnimatedSection>
         {/* ── First 4 certificates — always visible ── */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+      <div 
+        // className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4" // side by side
+        className="flex flex-col gap-4 mb-4" // stack
+      >
         {CERTIFICATES.slice(0, VISIBLE_COUNT).map((cert, i) => (
           <CertCard key={cert.id} cert={cert} index={i} />
         ))}
