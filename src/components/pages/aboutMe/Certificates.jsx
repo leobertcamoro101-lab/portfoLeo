@@ -16,12 +16,11 @@ function Certificates() {
   const hiddenCount = CERTIFICATES.length - VISIBLE_COUNT;
   return (
     <section id="certificates" className="max-w-[860px] mx-auto px-10 py-12">
-     
-        <AnimatedSection>
-          <SectionEyebrow>{t("aboutMe.certificates")}</SectionEyebrow>
-        </AnimatedSection>
-        {/* ── First 4 certificates — always visible ── */}
-      <div 
+      <AnimatedSection>
+        <SectionEyebrow>{t("aboutMe.certificates")}</SectionEyebrow>
+      </AnimatedSection>
+      {/* ── First 4 certificates — always visible ── */}
+      <div
         // className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4" // side by side
         className="flex flex-col gap-4 mb-4" // stack
       >
@@ -39,7 +38,13 @@ function Certificates() {
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <div className="max-h-[400px] overflow-y-auto pr-1 scrollbar-hide flex flex-col gap-4 mb-4">
+            <div
+              className="max-h-[400px] overflow-y-auto pr-1 flex flex-col gap-4 mb-4"
+              style={{
+                msOverflowStyle: "none",
+                scrollbarWidth: "none",
+              }}
+            >
               {CERTIFICATES.slice(VISIBLE_COUNT).map((cert, i) => (
                 <CertCard key={cert.id} cert={cert} index={i} />
               ))}
@@ -62,8 +67,7 @@ function Certificates() {
             </motion.span>
             {showAll
               ? "Show less"
-              : `Show ${hiddenCount} more certificate${hiddenCount > 1 ? "s" : ""}`
-            }
+              : `Show ${hiddenCount} more certificate${hiddenCount > 1 ? "s" : ""}`}
           </button>
         </AnimatedSection>
       )}

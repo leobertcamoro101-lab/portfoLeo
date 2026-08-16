@@ -31,7 +31,7 @@ function TagCarousel({ tags = [] }) {
   };
 
   return (
-    <div className="relative flex items-center gap-1">
+    <div className="relative flex items-center gap-1 m-4">
       {/* ── Left arrow ── */}
       <motion.button
         onClick={() => scroll("left")}
@@ -67,7 +67,7 @@ function TagCarousel({ tags = [] }) {
         {/* Scrollable tags */}
         <div
           ref={trackRef}
-          className="flex gap-1.5 overflow-x-auto scrollbar-hide"
+          className="flex gap-1.5 overflow-x-auto "
           style={{
             msOverflowStyle: "none",
             scrollbarWidth: "none",

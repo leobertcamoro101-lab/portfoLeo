@@ -18,7 +18,7 @@ function Skills() {
       <AnimatedSection delay={0.1}>
         {/* ── Tab buttons — horizontally scrollable ── */}
         <div className="relative mb-6">
-          <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+          <div className="flex gap-2 overflow-x-auto pb-2 ">
             {SKILLS.map((group, i) => (
               <button
                 key={group.category}

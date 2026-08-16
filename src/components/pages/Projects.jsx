@@ -18,22 +18,22 @@ function Projects() {
 
   return (
     <section id="projects" className="max-w-[860px] mx-auto px-10 py-14 ">
-        <AnimatedSection >
-          <SectionEyebrow>{t("projects.title")}</SectionEyebrow>
-        </AnimatedSection>
+      <AnimatedSection>
+        <SectionEyebrow>{t("projects.title")}</SectionEyebrow>
+      </AnimatedSection>
 
-        {/* ── First 2 projects — always visible ── */}
-        <div 
+      {/* ── First 2 projects — always visible ── */}
+      <div
         // className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4" // side by side
         className="flex flex-col gap-4 mb-4" // stack
-        >
-          {PROJECTS.slice(0, VISIBLE_COUNT).map((p, i) => (
+      >
+        {PROJECTS.slice(0, VISIBLE_COUNT).map((p, i) => (
           <AnimatedSection key={p.id} delay={i * 0.1}>
             <ProjectCard project={p} index={i} />
           </AnimatedSection>
         ))}
-        </div>
-        {/* ── Remaining projects — scrollable ── */}
+      </div>
+      {/* ── Remaining projects — scrollable ── */}
       <AnimatePresence>
         {showAll && (
           <motion.div
@@ -43,7 +43,13 @@ function Projects() {
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <div className="max-h-[600px] overflow-y-auto pr-1 scrollbar-hide flex flex-col gap-4 mb-4">
+            <div
+              className="max-h-[600px] overflow-y-auto pr-1 flex flex-col gap-4 mb-4"
+              style={{
+                msOverflowStyle: "none",
+                scrollbarWidth: "none",
+              }}
+            >
               {PROJECTS.slice(VISIBLE_COUNT).map((p, i) => (
                 <ProjectCard key={p.id} project={p} index={i} />
               ))}
@@ -66,12 +72,10 @@ function Projects() {
             </motion.span>
             {showAll
               ? "Show less"
-              : `Show ${hiddenCount} more project${hiddenCount > 1 ? "s" : ""}`
-            }
+              : `Show ${hiddenCount} more project${hiddenCount > 1 ? "s" : ""}`}
           </button>
         </AnimatedSection>
       )}
-      
     </section>
   );
 }

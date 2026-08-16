@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { popIn, fadeUp, staggerContainer } from "../../../utils/animations";
 import SectionEyebrow from "../../SectionEyebrow";
-import Tag from "./Tag";
+import TagCarousel from "../../TagCarousel";
 import { WORK_EXPERIENCE } from "./aboutMeData";
 import { useTranslation } from "react-i18next";
 
@@ -48,11 +48,13 @@ function WorkExperience() {
               <p className="text-[13px] text-[#7A7468] leading-[1.7] mb-4">
                 {job.description}
               </p>
-              <div className="flex flex-wrap gap-1.5">
+              {/* <div className="flex flex-wrap gap-1.5">
                 {job.tags.map((tag) => (
                   <Tag key={tag} label={tag} />
                 ))}
-              </div>
+              </div> */}
+              {/* TagCarousel */}
+              <TagCarousel tags={job.tags} />
             </motion.div>
           ))}
         </div>
