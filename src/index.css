@@ -43,3 +43,32 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Hide scrollbar but keep scroll functionality */
+
+/* @layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+} */
+
+/* .scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+} */
+
+/* Hide all scrollbars globally */
+/* * {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+} */

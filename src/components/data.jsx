@@ -1,12 +1,12 @@
 export const PROJECTS = [
   {
     id: 3,
-    icon: "💰",
+    icon: "📍",
     iconBg: "bg-[#E4F2EB]",
     type: "udemy",
     title: "Placepulse",
     description:
-      "A web app where users can create accounts and log in, Browse users and view their listed places, Create, update, and manage place entries, Use authentication-protected routes for private actions (mern project), Updated to latest version and libraries by me (from udemy course MERN) ",
+      "A web app where users can create accounts and log in, Browse users and view their listed places, Create, update, and manage place entries, Use authentication-protected routes for private actions. Updated to latest version and libraries by me (mern project).",
     tags: ["React", "Vite", "TypeScript", "Tailwind CSS", "Vercel", "clsx", "Lucide React", "Nprogress", "Open Layer", "React Router DOM", "serve", "Tailwind Merge", "axios", "bcryptjs", "body-parser", "Cloudinary", "express", "Express Validator", "Jsonwebtoken", "Mongoose", "Multer", "Streamifier", "UUID", "express-mongo-sanitize", "express-rate-limit", "helmet", "Sendinblue API v3 SDK", "vitest", "@vitest/coverage-v8", "supertest", "ts-node-dev", "mongodb-memory-server"],
     liveUrl: "https://placepulse-updated.vercel.app/",
     sourceUrl: "https://github.com/leobertcamoro101-lab/placepulse-updated",

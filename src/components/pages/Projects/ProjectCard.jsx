@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { popIn } from "../../../utils/animations";
 import ProjectTypeBadge from "./ProjectTypeBadge";
+import TagCarousel from "./TagCarousel";
 
 function ProjectCard({ project, index }) {
   return (
@@ -35,7 +36,7 @@ function ProjectCard({ project, index }) {
         {project.description}
       </p>
       {/* Tags */}
-      <div className="flex flex-wrap gap-1.5">
+      {/* <div className="flex flex-wrap gap-1.5">
         {project.tags.map((tag) => (
           <span
             key={tag}
@@ -44,7 +45,8 @@ function ProjectCard({ project, index }) {
             {tag}
           </span>
         ))}
-      </div>
+      </div> */}
+      <TagCarousel tags={project.tags} />
       {/* Buttons — Live Demo + Source Code */}
       <div className="flex gap-2 mt-2">
         {/* Live Demo */}
