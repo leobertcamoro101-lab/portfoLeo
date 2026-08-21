@@ -6,8 +6,8 @@ export const PROJECTS = [
     type: "udemy",
     title: "Placepulse",
     description:
-      "A web app where users can create accounts and log in, Browse users and view their listed places, Create, update, and manage place entries, Use authentication-protected routes for private actions. Updated to latest version and libraries by me (mern project).",
-    tags: ["React", "Vite", "TypeScript", "Tailwind CSS", "Vercel", "clsx", "Lucide React", "Nprogress", "Open Layer", "React Router DOM", "serve", "Tailwind Merge", "axios", "bcryptjs", "body-parser", "Cloudinary", "express", "Express Validator", "Jsonwebtoken", "Mongoose", "Multer", "Streamifier", "UUID", "express-mongo-sanitize", "express-rate-limit", "helmet", "Sendinblue API v3 SDK", "vitest", "@vitest/coverage-v8", "supertest", "ts-node-dev", "mongodb-memory-server"],
+      "A web app where users can create accounts and log in, Browse users and view their listed places, Create, update, and manage place entries, Use authentication-protected routes for private actions. Updated to latest version and libraries.",
+    tags: ["React", "Vite", "TypeScript", "Tailwind CSS", "Vercel", "clsx", "Lucide React", "Nprogress", "Open Layer", "React Router DOM", "serve", "Tailwind Merge", "axios", "bcryptjs", "body-parser", "Cloudinary", "express", "Express Validator", "Jsonwebtoken", "Mongoose", "Multer", "Streamifier", "UUID", "express-mongo-sanitize", "express-rate-limit", "helmet", "Sendinblue API v3 SDK", "vitest", "@vitest/coverage-v8", "supertest", "ts-node-dev", "mongodb-memory-server", "@playwright/test", "pino"],
     liveUrl: "https://placepulse-updated.vercel.app/",
     sourceUrl: "https://github.com/leobertcamoro101-lab/placepulse-updated",
   },
@@ -40,9 +40,9 @@ export const PROJECTS = [
 
 export const SKILLS = [
   { category: "Frontend", items: ["HTML", "CSS", "Javascript","React", "TypeScript", "Tailwind CSS", "Framer Motion", "i18next", "Zod", "clsx", "Lucide React", "nprogress", "ol", "React Router DOM", "serve", "Tailwind Merge",] },
-  { category: "Backend",  items: ["Node.js", "Express.js", "Mongoose", "Multer", "Axios", "bcryptjs", "body-parser", "Express Validator", "Jsonwebtoken", "Streamifier", "UUID", "express-mongo-sanitize", "express-rate-limit", "helmet", "Sendinblue API v3 SDK", "vitest", "@vitest/coverage-v8", "supertest", "ts-node-dev", "mongodb-memory-server"] },
+  { category: "Backend",  items: ["Node.js", "Express.js", "Mongoose", "Multer", "Axios", "bcryptjs", "body-parser", "Express Validator", "Jsonwebtoken", "Streamifier", "UUID", "express-mongo-sanitize", "express-rate-limit", "helmet", "Sendinblue API v3 SDK", "vitest", "@vitest/coverage-v8", "supertest", "ts-node-dev", "mongodb-memory-server", "pino"] },
   { category: "Database", items: ["PostgreSQL", "MongoDB", "firebase", "Cloudinary"] },
   { category: "DevOps",   items: ["Docker", "Linux", "Git", "Firebase", "Vercel", "Netlify", "Render"] },
-  { category: "Testing",  items: ["Jest", "Vitest", "Postman"] },
+  { category: "Testing",  items: ["Jest", "Vitest", "Postman", "Playwright E2E"] },
   { category: "Other",    items: ["NPM"] }
 ];
