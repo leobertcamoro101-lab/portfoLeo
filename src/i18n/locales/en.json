@@ -12,7 +12,7 @@
   "hero": {
     "badge": "Open to work",
     "title": "Hi, I'm",
-    "role": "a React.JS + TypeScript developer.",
+    "role": "a React.JS developer.",
     "bio": "I'm an AI-assisted, beginner developer who crafts accessible, and visually refined web experiences. With a deep commitment to clean code and intuitive UI, I focus on building solutions that genuinely make people's lives easier.",
     "location": "Cebu City, Philippines",
     "getInTouch": "Get in touch ↗",
@@ -46,7 +46,7 @@
   },
   "aboutMe": {
     "badge": "Open to work · Cebu City, PH",
-    "role": "Frontend Developer · React JS + TypeScript Enthusiast",
+    "role": "Frontend Developer · React JS Enthusiast",
     "bio": "I am a beginner on my React JS journey, passionate about building clean and accessible web experiences. Every project is a new lesson, and I am committed to growing one component at a time.",
     "downloadResume": "Download Resume",
     "backPortfolio": "← Back to Portfolio",

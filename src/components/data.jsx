@@ -1,5 +1,17 @@
 export const PROJECTS = [
   {
+    id: 4,
+    icon: "▶️",
+    iconBg: "bg-[#E4F2EB]",
+    type: "github",
+    title: "ReactPlay",
+    description:
+      "react-play is an open-source web app that helps you learn ReactJS faster with a hands-on practice model. It is a collection of ReactJS projects that you can use to learn ReactJS. Is that all? Nope. You can also create your projects and share them with the world. The best part is that the ReactJS experts will review your project code before it gets part of the ReactPlay app. Isn't that a pure WIN-WIN?",
+    tags: ["React", "Vite", "TypeScript", "Tailwind CSS", "Vercel", "clsx", "Lucide React", "Nprogress", "Open Layer", "React Router DOM", "serve", "Tailwind Merge", "axios", "bcryptjs", "body-parser", "Cloudinary", "express", "Express Validator", "Jsonwebtoken", "Mongoose", "Multer", "Streamifier", "UUID", "express-mongo-sanitize", "express-rate-limit", "helmet", "Sendinblue API v3 SDK", "vitest", "@vitest/coverage-v8", "supertest", "ts-node-dev", "mongodb-memory-server", "@playwright/test", "pino"],
+    liveUrl: "https://reactplay.io/",
+    sourceUrl: "https://github.com/leobertcamoro101-lab/react-play.git",
+  },
+  {
     id: 3,
     icon: "📍",
     iconBg: "bg-[#E4F2EB]",
