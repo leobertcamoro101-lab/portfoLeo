@@ -35,7 +35,7 @@ function ProfileHero() {
 
           <p className="text-[15px] text-[#7A7468] leading-[1.75] max-w-[480px] mb-6">
             {/* {t("aboutMe.bio")} */}
-            As a web developer, I started my journey HTML, CSS, JAVASCRIPT and Framework React back in College. After Graduated, I get my first Job as Software Engineer. I was introduced a Template Project to practice on a Frontend React and Backend Laravel(PHP Framework). I discovered the real world web developing that are many to choose from latest Framework Java Script and Libraries React among other Framework. 
+            I began my web development journey in college, working with HTML, CSS, JavaScript, and the React framework. After graduation, I secured my first role as a Software Engineer, where I was assigned to a template project to practice building a frontend with React and a backend using Laravel (a PHP framework). Through this experience, I was introduced to real‑world web development and discovered the wide range of modern JavaScript frameworks and libraries available, including React and others, which broadened my understanding of the evolving technology landscape.
           </p>
 
           <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
