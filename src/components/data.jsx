@@ -31,7 +31,7 @@ export const PROJECTS = [
     title: "WeatherNow",
     description:
       "WeatherNow is a React weather application built with Vite. Users can: Search for weather by city, View current temperature, conditions, humidity, wind, and other details, See a short-term forecast, Use their current location to get local weather, Save recently searched cities in browser local storage, Remove saved cities, Receive loading states and helpful error messages, The app retrieves data from the OpenWeatherMap API and uses CSS Modules for component styling.",
-    tags: ["React", "Vite", "axios", "CSS", "OpenWeatherMap API"],
+    tags: ["React", "Vite", "axios", "Tailwind CSS", "OpenWeatherMap API"],
     liveUrl: null,
     sourceUrl: "https://github.com/leobertcamoro101-lab/WeatherNow.git",
   },
