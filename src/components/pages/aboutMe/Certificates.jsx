@@ -15,20 +15,22 @@ function Certificates() {
   const hasMore = CERTIFICATES.length > VISIBLE_COUNT;
   const hiddenCount = CERTIFICATES.length - VISIBLE_COUNT;
   return (
-    <section id="certificates" className="max-w-[860px] mx-auto px-10 py-12">
+    <section id="certificates" className="max-w-[860px] mx-auto px-5 sm:px-10 py-12">
       <AnimatedSection>
         <SectionEyebrow>{t("aboutMe.certificates")}</SectionEyebrow>
       </AnimatedSection>
-      {/* ── First 4 certificates — always visible ── */}
-      <div
-        // className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4" // side by side
-        className="flex flex-col gap-4 mb-4" // stack
-      >
-        {CERTIFICATES.slice(0, VISIBLE_COUNT).map((cert, i) => (
-          <CertCard key={cert.id} cert={cert} index={i} />
-        ))}
-      </div>
-      {/* ── Remaining certificates — scrollable ── */}
+      {/* ── First 4 certificates — shown on their own only while collapsed ── */}
+      {!showAll && (
+        <div
+          // className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4" // side by side
+          className="flex flex-col gap-4 mb-4" // stack
+        >
+          {CERTIFICATES.slice(0, VISIBLE_COUNT).map((cert, i) => (
+            <CertCard key={cert.id} cert={cert} index={i} />
+          ))}
+        </div>
+      )}
+      {/* ── Expanded: first 4 + remaining certificates, all scrollable together ── */}
       <AnimatePresence>
         {showAll && (
           <motion.div
@@ -45,7 +47,7 @@ function Certificates() {
                 scrollbarWidth: "none",
               }}
             >
-              {CERTIFICATES.slice(VISIBLE_COUNT).map((cert, i) => (
+              {CERTIFICATES.map((cert, i) => (
                 <CertCard key={cert.id} cert={cert} index={i} />
               ))}
             </div>

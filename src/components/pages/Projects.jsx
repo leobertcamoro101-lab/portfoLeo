@@ -17,23 +17,25 @@ function Projects() {
   const hiddenCount = PROJECTS.length - VISIBLE_COUNT;
 
   return (
-    <section id="projects" className="max-w-[860px] mx-auto px-10 py-14 ">
+    <section id="projects" className="max-w-[860px] mx-auto px-5 sm:px-10 py-14 ">
       <AnimatedSection>
         <SectionEyebrow>{t("projects.title")}</SectionEyebrow>
       </AnimatedSection>
 
-      {/* ── First 2 projects — always visible ── */}
-      <div
-        // className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4" // side by side
-        className="flex flex-col gap-4 mb-4" // stack
-      >
-        {PROJECTS.slice(0, VISIBLE_COUNT).map((p, i) => (
-          <AnimatedSection key={p.id} delay={i * 0.1}>
-            <ProjectCard project={p} index={i} />
-          </AnimatedSection>
-        ))}
-      </div>
-      {/* ── Remaining projects — scrollable ── */}
+      {/* ── First 2 projects — shown on their own only while collapsed ── */}
+      {!showAll && (
+        <div
+          // className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4" // side by side
+          className="flex flex-col gap-4 mb-4" // stack
+        >
+          {PROJECTS.slice(0, VISIBLE_COUNT).map((p, i) => (
+            <AnimatedSection key={p.id} delay={i * 0.1}>
+              <ProjectCard project={p} index={i} />
+            </AnimatedSection>
+          ))}
+        </div>
+      )}
+      {/* ── Expanded: latest 2 + remaining projects, all scrollable together ── */}
       <AnimatePresence>
         {showAll && (
           <motion.div
@@ -50,7 +52,7 @@ function Projects() {
                 scrollbarWidth: "none",
               }}
             >
-              {PROJECTS.slice(VISIBLE_COUNT).map((p, i) => (
+              {PROJECTS.map((p, i) => (
                 <ProjectCard key={p.id} project={p} index={i} />
               ))}
             </div>
