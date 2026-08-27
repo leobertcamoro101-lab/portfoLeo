@@ -1,6 +1,6 @@
 export const PROJECTS = [
   {
-    id: 4,
+    id: 7,
     icon: "▶️",
     iconBg: "bg-[#E4F2EB]",
     type: "github",
@@ -10,6 +10,42 @@ export const PROJECTS = [
     tags: ["add", "axios", "browser-image-compression", "classnames", "codemirror", "date-fns", "dom-to-image", "dompurify", "downloadjs", "file-saver", "firebase", "git-repo-api", "graphql", "highlight.js", "html-to-image", "html2canvas", "json-graphql-parser", "jspdf", "leaflet", "lodash", "lodash.memoize", "mathjs", "p5", "react", "react-chatbot-kit", "react-codemirror2", "react-color", "react-confetti", "react-countdown", "react-dom", "react-dropzone", "react-error-boundary", "react-helmet", "react-hot-toast", "react-icons", "react-infinite-scroll-component", "react-infinite-scroll-hook", "react-infinite-scroller", "react-leaflet", "react-loader-spinner", "react-organizational-chart", "react-p5", "react-qr-code", "react-redux", "react-router-dom", "react-scripts", "react-shimmer-effect", "react-simple-maps", "react-toastify", "react-twitter-widgets", "react-webcam", "redux", "redux-persist", "remarkable", "reselect", "sass", "styled-components", "swiper", "url", "web-vitals", "workbox-cacheable-response", "workbox-core", "workbox-expiration", "workbox-precaching", "workbox-routing", "workbox-strategies", "workbox-window", "yarn"],
     liveUrl: "https://reactplay.io/",
     sourceUrl: "https://github.com/leobertcamoro101-lab/react-play.git",
+  },
+  {
+    id: 6,
+    icon: "🎥",
+    iconBg: "bg-[#E4F2EB]",
+    type: "personal",
+    title: "ReelScout",
+    description:
+      "MovieSearch is a React movie discovery app built with Vite, Tailwind CSS, and the TMDB API. It displays weekly trending movies on startup and lets users search for films with debounced live search. Results appear as poster cards showing the title, release year, and rating. Users can load more search results and open any movie to view its synopsis, genres, runtime, rating, trailer, and cast in a modal.",
+    tags: ["React", "Vite", "axios", "Tailwind CSS", "TMDB API"],
+    liveUrl: null,
+    sourceUrl: "https://github.com/leobertcamoro101-lab/ReelScout.git",
+  },
+  {
+    id: 5,
+    icon: "🌧️",
+    iconBg: "bg-[#E4F2EB]",
+    type: "personal",
+    title: "WeatherNow",
+    description:
+      "WeatherNow is a React weather application built with Vite. Users can: Search for weather by city, View current temperature, conditions, humidity, wind, and other details, See a short-term forecast, Use their current location to get local weather, Save recently searched cities in browser local storage, Remove saved cities, Receive loading states and helpful error messages, The app retrieves data from the OpenWeatherMap API and uses CSS Modules for component styling.",
+    tags: ["React", "Vite", "axios", "CSS", "OpenWeatherMap API"],
+    liveUrl: null,
+    sourceUrl: "https://github.com/leobertcamoro101-lab/WeatherNow.git",
+  },
+  {
+    id: 4,
+    icon: "🗓️",
+    iconBg: "bg-[#E4F2EB]",
+    type: "personal",
+    title: "TaskFlow",
+    description:
+      "TaskFlow is a simple and user-friendly task management app built with React. It allows users to add tasks, mark tasks as completed, delete tasks, filter tasks by status, and save tasks in browser local storage so they remain available after refreshing the page.",
+    tags: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
+    liveUrl: null,
+    sourceUrl: "https://github.com/leobertcamoro101-lab/TaskFlow.git",
   },
   {
     id: 3,

@@ -53,7 +53,7 @@ function Hero() {
           className=" text-base text-[#7A7468] dark:text-[#A09890] leading-[1.75] mb-3"
         >
           {/* {t("hero.bio")} */}
-          Learning and practicing from udemy course, ai assist and GitHub open source project. Honing my skill not only to become Vibe Coder, I want to become a Real Developer.
+          Learning and practicing from udemy course, ai assisted and GitHub open source project. Honing my skill not only to become Vibe Coder, I want to become a Real Developer.
         </motion.p>
 
         {/* Location */}
