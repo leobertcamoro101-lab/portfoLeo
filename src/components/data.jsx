@@ -1,7 +1,7 @@
 export const PROJECTS = [
   {
     id: 8,
-    icon: "▶️",
+    icon: "📊",
     iconBg: "bg-[#E4F2EB]",
     type: "personal",
     title: "Spendr",
