@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 function WorkExperience() {
   const { t } = useTranslation();
   return (
-    <section id="work-experience" className="max-w-[860px] mx-auto px-10 py-12">
+    <section id="work-experience" className="max-w-[860px] mx-auto px-5 sm:px-10 py-12">
       <motion.div
         variants={staggerContainer}
         initial="hidden"

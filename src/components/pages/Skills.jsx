@@ -11,7 +11,7 @@ function Skills() {
   const { t } = useTranslation();
 
   return (
-    <section id="skills" className=" max-w-[860px] mx-auto px-10 py-14 ">
+    <section id="skills" className=" max-w-[860px] mx-auto px-5 sm:px-10 py-14 ">
       <AnimatedSection variants={fadeUp}>
         <SectionEyebrow>{t("skills.title")}</SectionEyebrow>
       </AnimatedSection>

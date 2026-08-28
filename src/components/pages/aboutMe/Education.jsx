@@ -9,7 +9,7 @@ function Education() {
   return (
     <section
       id="educational-background"
-      className="max-w-[860px] mx-auto px-10 py-12"
+      className="max-w-[860px] mx-auto px-5 sm:px-10 py-12"
     >
       <motion.div
         variants={staggerContainer}
