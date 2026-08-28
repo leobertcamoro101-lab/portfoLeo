@@ -1,5 +1,17 @@
 export const PROJECTS = [
   {
+    id: 8,
+    icon: "▶️",
+    iconBg: "bg-[#E4F2EB]",
+    type: "personal",
+    title: "Spendr",
+    description:
+      "Transaction form for adding new expenses, Transaction list for viewing all entries, Summary cards for financial overview, Charts powered by Recharts for data visualization, Filter bar for narrowing down transactions. It's an ideal tool for personal finance management and understanding spending habits over time.",
+    tags: ["React", "Vite", "Tailwind CSS", "uuid", "recharts"],
+    liveUrl: "https://spendr-lac.vercel.app/",
+    sourceUrl: "https://github.com/leobertcamoro101-lab/react-play.git",
+  },
+  {
     id: 7,
     icon: "▶️",
     iconBg: "bg-[#E4F2EB]",
@@ -20,7 +32,7 @@ export const PROJECTS = [
     description:
       "MovieSearch is a React movie discovery app built with Vite, Tailwind CSS, and the TMDB API. It displays weekly trending movies on startup and lets users search for films with debounced live search. Results appear as poster cards showing the title, release year, and rating. Users can load more search results and open any movie to view its synopsis, genres, runtime, rating, trailer, and cast in a modal.",
     tags: ["React", "Vite", "axios", "Tailwind CSS", "TMDB API"],
-    liveUrl: null,
+    liveUrl: 'https://reel-scout-eight.vercel.app/',
     sourceUrl: "https://github.com/leobertcamoro101-lab/ReelScout.git",
   },
   {
@@ -32,7 +44,7 @@ export const PROJECTS = [
     description:
       "WeatherNow is a React weather application built with Vite. Users can: Search for weather by city, View current temperature, conditions, humidity, wind, and other details, See a short-term forecast, Use their current location to get local weather, Save recently searched cities in browser local storage, Remove saved cities, Receive loading states and helpful error messages, The app retrieves data from the OpenWeatherMap API and uses CSS Modules for component styling.",
     tags: ["React", "Vite", "axios", "Tailwind CSS", "OpenWeatherMap API"],
-    liveUrl: null,
+    liveUrl: 'https://weather-now-sigma-three.vercel.app/',
     sourceUrl: "https://github.com/leobertcamoro101-lab/WeatherNow.git",
   },
   {
