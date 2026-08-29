@@ -22,6 +22,27 @@ export const PROJECTS = [
     tags: ["add", "axios", "browser-image-compression", "classnames", "codemirror", "date-fns", "dom-to-image", "dompurify", "downloadjs", "file-saver", "firebase", "git-repo-api", "graphql", "highlight.js", "html-to-image", "html2canvas", "json-graphql-parser", "jspdf", "leaflet", "lodash", "lodash.memoize", "mathjs", "p5", "react", "react-chatbot-kit", "react-codemirror2", "react-color", "react-confetti", "react-countdown", "react-dom", "react-dropzone", "react-error-boundary", "react-helmet", "react-hot-toast", "react-icons", "react-infinite-scroll-component", "react-infinite-scroll-hook", "react-infinite-scroller", "react-leaflet", "react-loader-spinner", "react-organizational-chart", "react-p5", "react-qr-code", "react-redux", "react-router-dom", "react-scripts", "react-shimmer-effect", "react-simple-maps", "react-toastify", "react-twitter-widgets", "react-webcam", "redux", "redux-persist", "remarkable", "reselect", "sass", "styled-components", "swiper", "url", "web-vitals", "workbox-cacheable-response", "workbox-core", "workbox-expiration", "workbox-precaching", "workbox-routing", "workbox-strategies", "workbox-window", "yarn"],
     liveUrl: "https://reactplay.io/",
     sourceUrl: "https://github.com/leobertcamoro101-lab/react-play.git",
+    role: "Open Source Contributor",
+    pullRequests: [
+      {
+        id: 1,
+        title: "fix: remove unused imports and fix prettier formatting- #1721",
+        status: "open",  // merged | open | closed
+        url: "https://github.com/reactplay/react-play/pull/1721",
+      },
+      {
+        id: 2,
+        title: "[Play] Expense Tracker #1722",
+        status: "open",
+        url: "https://github.com/reactplay/react-play/issues/1722",
+      },
+      {
+        id: 3,
+        title: "feat: add expense tracker pro play- #1723",
+        status: "open",
+        url: "https://github.com/reactplay/react-play/pull/1723",
+      },
+    ],
   },
   {
     id: 6,

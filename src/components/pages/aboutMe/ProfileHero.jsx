@@ -7,7 +7,7 @@ function ProfileHero() {
   const { t } = useTranslation();
 
   return (
-    <div className="animate-[fadeUp_0.5s_ease_both] [animation-delay:0.05s] max-w-[860px] mx-auto px-5 sm:px-10 pt-16 pb-12 ">
+    <div className="animate-[fadeUp_0.5s_ease_both] [animation-delay:0.05s] max-w-[860px] mx-auto px-5 sm:px-10 pt-28 sm:pt-16 pb-12 ">
       <div className=" flex flex-col sm:flex-row items-center sm:items-start gap-8 p-0 sm:p-12">
         {/* Avatar */}
         <Avatar
