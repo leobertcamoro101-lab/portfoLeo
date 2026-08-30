@@ -1,6 +1,34 @@
 export const PROJECTS = [
   {
     id: 8,
+    icon: "🗓️",
+    iconBg: "bg-[#E4F2EB]",
+    type: "github",
+    title: "calcom/cal.diy",
+    description:
+      "Cal.diy is the community-driven, fully open-source scheduling platform — a fork of Cal.com with all enterprise/commercial code removed. Cal.diy is 100% MIT-licensed with no proprietary Enterprise Edition features. It's designed for individuals and self-hosters who want full control over their scheduling infrastructure without any commercial dependencies.",
+    tags: [ "c8", "checkly", "dotenv-checker", "husky", "i18n-unused", "jest-diff", "jest-summarizing-reporter", "lint-staged", "mailhog", "next-router-mock", "node-gyp", "node-ical", "prismock", "resize-observer-polyfill", "tsc-absolute", "turbo", "typescript", "vitest", "vitest-fetch-mock", "vitest-mock-extended"
+],
+    liveUrl: null,
+    sourceUrl: "https://github.com/leobertcamoro101-lab/cal.diy",
+    role: "Open Source Contributor",
+    pullRequests: [
+      {
+        id: 1,
+        title: "Removed unused TokenHandler component and its test file after confirming it was not exported or imported anywhere in the codebase. #30078",
+        status: "open",  // merged | open | closed
+        url: "https://github.com/calcom/cal.diy/pull/30078",
+      },
+      {
+        id: 2,
+        title: "Fixed hardcoded data-testid in VerticalTabItem component, making it truly reusable. Updated component and test file. #30079",
+        status: "open",
+        url: "https://github.com/calcom/cal.diy/pull/30079",
+      },
+    ],
+  },
+  {
+    id: 8,
     icon: "📊",
     iconBg: "bg-[#E4F2EB]",
     type: "personal",
@@ -20,7 +48,7 @@ export const PROJECTS = [
     description:
       "react-play is an open-source web app that helps you learn ReactJS faster with a hands-on practice model. It is a collection of ReactJS projects that you can use to learn ReactJS. Is that all? Nope. You can also create your projects and share them with the world. The best part is that the ReactJS experts will review your project code before it gets part of the ReactPlay app. Isn't that a pure WIN-WIN?",
     tags: ["add", "axios", "browser-image-compression", "classnames", "codemirror", "date-fns", "dom-to-image", "dompurify", "downloadjs", "file-saver", "firebase", "git-repo-api", "graphql", "highlight.js", "html-to-image", "html2canvas", "json-graphql-parser", "jspdf", "leaflet", "lodash", "lodash.memoize", "mathjs", "p5", "react", "react-chatbot-kit", "react-codemirror2", "react-color", "react-confetti", "react-countdown", "react-dom", "react-dropzone", "react-error-boundary", "react-helmet", "react-hot-toast", "react-icons", "react-infinite-scroll-component", "react-infinite-scroll-hook", "react-infinite-scroller", "react-leaflet", "react-loader-spinner", "react-organizational-chart", "react-p5", "react-qr-code", "react-redux", "react-router-dom", "react-scripts", "react-shimmer-effect", "react-simple-maps", "react-toastify", "react-twitter-widgets", "react-webcam", "redux", "redux-persist", "remarkable", "reselect", "sass", "styled-components", "swiper", "url", "web-vitals", "workbox-cacheable-response", "workbox-core", "workbox-expiration", "workbox-precaching", "workbox-routing", "workbox-strategies", "workbox-window", "yarn"],
-    liveUrl: "https://reactplay.io/",
+    liveUrl: null,
     sourceUrl: "https://github.com/leobertcamoro101-lab/react-play.git",
     role: "Open Source Contributor",
     pullRequests: [
