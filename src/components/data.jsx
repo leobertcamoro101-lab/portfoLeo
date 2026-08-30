@@ -1,6 +1,6 @@
 export const PROJECTS = [
   {
-    id: 8,
+    id: 9,
     icon: "🗓️",
     iconBg: "bg-[#E4F2EB]",
     type: "github",
