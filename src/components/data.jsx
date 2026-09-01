@@ -1,5 +1,17 @@
 export const PROJECTS = [
   {
+    id: 10,
+    icon: "🗓️",
+    iconBg: "bg-[#E4F2EB]",
+    type: "personal",
+    title: "TaskFlow",
+    description:
+      "Full-stack task manager with Laravel API backend, React frontend, JWT auth via Sanctum, and PostgreSQL database.",
+    tags: ['React', 'Vite', 'Laravel', 'PostgreSQL', 'Sanctum', 'Zustand', 'React Query'],
+    liveUrl: null,
+    sourceUrl: "https://github.com/leobertcamoro101-lab/TaskFlow-react-laravel",
+  },
+  {
     id: 9,
     icon: "🗓️",
     iconBg: "bg-[#E4F2EB]",
