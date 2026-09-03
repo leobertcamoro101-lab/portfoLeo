@@ -161,9 +161,10 @@ export const PROJECTS = [
 
 export const SKILLS = [
   { category: "Frontend", items: ["HTML", "CSS", "Javascript","React", "TypeScript", "Tailwind CSS", "Framer Motion", "i18next", "Zod", "clsx", "Lucide React", "nprogress", "ol", "React Router DOM", "serve", "Tailwind Merge",] },
-  { category: "Backend",  items: ["Node.js", "Express.js", "Mongoose", "Multer", "Axios", "bcryptjs", "body-parser", "Express Validator", "Jsonwebtoken", "Streamifier", "UUID", "express-mongo-sanitize", "express-rate-limit", "helmet", "Sendinblue API v3 SDK", "vitest", "@vitest/coverage-v8", "supertest", "ts-node-dev", "mongodb-memory-server", "pino"] },
+  { category: "Backend",  items: ["Node.js", "Express.js", "Mongoose", "Multer", "Axios", "bcryptjs", "body-parser", "Express Validator", "Jsonwebtoken", "Streamifier", "UUID", "express-mongo-sanitize", "express-rate-limit", "helmet", "Sendinblue API v3 SDK", "vitest", "@vitest/coverage-v8", "supertest", "ts-node-dev", "mongodb-memory-server", "pino", "Laravel", "Laravel Sanctum", "Prisma"] },
   { category: "Database", items: ["PostgreSQL", "MongoDB", "firebase", "Cloudinary"] },
   { category: "DevOps",   items: ["Docker", "Linux", "Git", "Firebase", "Vercel", "Netlify", "Render"] },
   { category: "Testing",  items: ["Jest", "Vitest", "Postman", "Playwright E2E"] },
-  { category: "Other",    items: ["NPM"] }
+  { category: "Other",    items: ["NPM", "BUN"] },
+  { category: "AI-Assisted Development",   items: ["Claude (Anthropic)", "Prompt Engineering", "Codex", "ChatGPT (OpenAI)", "GitHub Copilot"] },
 ];
