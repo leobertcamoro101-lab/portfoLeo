@@ -6,5 +6,7 @@ export default defineConfig({
     supportFile: false,
     video: false,
     screenshotOnRunFailure: true,
+    defaultCommandTimeout: 10000, // ← increase timeout for CI
+    pageLoadTimeout: 30000,       // ← increase page load timeout
   },
 });
