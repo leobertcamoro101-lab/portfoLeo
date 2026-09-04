@@ -40,7 +40,7 @@ function ProfileHero() {
 
           <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
             <a
-              href="/resume.pdf"
+              href="/Leobert-Camoro-Resume.pdf"
               download
               className="inline-flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-lg bg-[#1A1814] dark:bg-[#F7F5F0] text-[#F7F5F0] dark:text-[#1A1814] hover:opacity-85 transition-all duration-150 no-underline"
             >
