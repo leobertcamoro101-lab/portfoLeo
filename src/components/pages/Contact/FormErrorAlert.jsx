@@ -2,7 +2,7 @@ function FormErrorAlert({ errorInfo }) {
   if (!errorInfo) return null;
 
   return (
-    <div className="p-4 bg-red-50 border-l-4 border-red-500 rounded-lg">
+    <div data-testid="form-error-alert" className="p-4 bg-red-50 border-l-4 border-red-500 rounded-lg">
       <div className="flex gap-3">
         <span className="text-2xl">{errorInfo.category.icon}</span>
         <div className="flex-1">

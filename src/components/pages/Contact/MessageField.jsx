@@ -22,7 +22,9 @@ function MessageField({ value, onChange, error }) {
         }`}
       />
       {error && (
-        <p className="text-xs text-red-600 font-medium">{error}</p>
+        <p data-testid="field-error" className="text-xs text-red-600 font-medium">
+          {error}
+        </p>
       )}
     </div>
   );

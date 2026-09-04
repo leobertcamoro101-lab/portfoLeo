@@ -9,6 +9,7 @@ function InputField({
   error,
 }) {
   return (
+    
     <div className="flex flex-col gap-1.5">
       <label className="text-[12px] font-medium uppercase tracking-[0.08em] text-[#7A7468]">
         {label} {required && <span className="text-[#2D5BE3]">*</span>}
@@ -27,7 +28,9 @@ function InputField({
         }`}
       />
       {error && (
-        <p className="text-xs text-red-600 font-medium">{error}</p>
+        <p data-testid="field-error" className="text-xs text-red-600 font-medium">
+          {error}
+        </p>
       )}
     </div>
   );

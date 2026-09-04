@@ -7,19 +7,19 @@ export const contactFormSchema = z.object({
     .min(2, "Name must be at least 2 characters")
     .max(50, "Name must be less than 50 characters")
     .regex(/^[a-zA-Z\s'-]+$/, "Name can only contain letters, spaces, hyphens, and apostrophes"),
-  
+
   from_email: z
     .string()
     .min(1, "Email is required")
     .email("Please enter a valid email address")
     .max(100, "Email must be less than 100 characters"),
-  
+
   subject: z
     .string()
     .min(1, "Subject is required")
     .min(5, "Subject must be at least 5 characters")
     .max(100, "Subject must be less than 100 characters"),
-  
+
   message: z
     .string()
     .min(1, "Message is required")
@@ -28,7 +28,7 @@ export const contactFormSchema = z.object({
 });
 
 export const validateForm = (formData) => {
-  // ✅ Guard — make sure formData exists and is an object
+  // Guard — make sure formData exists
   if (!formData || typeof formData !== "object") {
     return {
       valid: false,
@@ -36,38 +36,21 @@ export const validateForm = (formData) => {
     };
   }
 
-  try {
-    contactFormSchema.parse(formData);
+  // ✅ Use safeParse instead of parse — no try/catch needed
+  const result = contactFormSchema.safeParse(formData);
+
+  if (result.success) {
     return { valid: true, errors: {} };
-  } catch (error) {
-    const errors = {};
-
-    // ✅ Guard — make sure error.errors exists and is an array
-    if (error?.errors && Array.isArray(error.errors)) {
-      error.errors.forEach((err) => {
-        const path = err.path[0];
-        if (path) {
-          errors[path] = err.message;
-        }
-      });
-    } else {
-      // Fallback if Zod error structure is unexpected
-      errors.general = "Validation failed. Please check your inputs.";
-    }
-
-    return { valid: false, errors };
   }
+
+  // ✅ Extract field errors from Zod's formatted errors
+  const errors = {};
+  result.error.issues.forEach((issue) => {
+    const path = issue.path[0];
+    if (path && !errors[path]) {
+      errors[path] = issue.message;
+    }
+  });
+
+  return { valid: false, errors };
 };
-// export const validateForm = (formData) => {
-//   try {
-//     contactFormSchema.parse(formData);
-//     return { valid: true, errors: {} };
-//   } catch (error) {
-//     const errors = {};
-//     error.errors.forEach((err) => {
-//       const path = err.path[0];
-//       errors[path] = err.message;
-//     });
-//     return { valid: false, errors };
-//   }
-// };
