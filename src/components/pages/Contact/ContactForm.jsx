@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
 import { categorizeError, ERROR_CATEGORIES } from "./CategorizedError";
-import { validateForm } from "./validateForm";
+import { validateForm } from "./formValidation";
 import FormErrorAlert from "./FormErrorAlert";
 import FormFields from "./FormFields";
 import MessageField from "./MessageField";
