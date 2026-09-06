@@ -92,7 +92,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           start: serve -s dist -l 4173
-          wait-on: "http://localhost:5173"
+          wait-on: "http://localhost:4173"
           wait-on-timeout: 60
           browser: chrome
         env:
