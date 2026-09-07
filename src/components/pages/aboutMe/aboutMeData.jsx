@@ -25,6 +25,14 @@ export const EDUCATION = [
 
 export const CERTIFICATES = [
   {
+    id: 8,
+    title: "Claude Code - The Practical Guide",
+    issuer: "Udemy",
+    date: "Sept 07, 2026",
+    icon: "⚛️",
+    color: "bg-[#E8EDFB]",
+  },
+  {
     id: 7,
     title: "React, NodeJS, Express MongoDB - The MERN Fullstack Guide",
     issuer: "Udemy",
