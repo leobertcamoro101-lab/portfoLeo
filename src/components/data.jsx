@@ -9,7 +9,7 @@ export const PROJECTS = [
       "Full-stack job board where companies post jobs and candidates apply. Features search, filtering, and form validation.",
     tags: ['React', 'TypeScript', 'Laravel', 'PostgreSQL', 'React Query', 'Zod'],
     liveUrl: null,
-    sourceUrl: "https://github.com/leobertcamoro101-lab/TaskFlow-react-laravel",
+    sourceUrl: "https://github.com/leobertcamoro101-lab/JobBoard",
   },
   {
     id: 10,
