@@ -1,5 +1,17 @@
 export const PROJECTS = [
   {
+    id: 11,
+    icon: "💼",
+    iconBg: "bg-[#E4F2EB]",
+    type: "personal",
+    title: "JobBoard",
+    description:
+      "Full-stack job board where companies post jobs and candidates apply. Features search, filtering, and form validation.",
+    tags: ['React', 'TypeScript', 'Laravel', 'PostgreSQL', 'React Query', 'Zod'],
+    liveUrl: null,
+    sourceUrl: "https://github.com/leobertcamoro101-lab/TaskFlow-react-laravel",
+  },
+  {
     id: 10,
     icon: "🗓️",
     iconBg: "bg-[#E4F2EB]",
