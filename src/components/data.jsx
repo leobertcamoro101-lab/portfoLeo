@@ -20,7 +20,7 @@ export const PROJECTS = [
     description:
       "Full-stack job board where companies post jobs and candidates apply. Features search, filtering, and form validation.",
     tags: ['React', 'TypeScript', 'Laravel', 'PostgreSQL', 'React Query', 'Zod'],
-    liveUrl: null,
+    liveUrl: 'https://job-board-rho-green.vercel.app/',
     sourceUrl: "https://github.com/leobertcamoro101-lab/JobBoard",
   },
   {
