@@ -1,5 +1,17 @@
 export const PROJECTS = [
   {
+    id: 12,
+    icon: "💬",
+    iconBg: "bg-[#E4F2EB]",
+    type: "personal",
+    title: "Relay",
+    description:
+      "Relay is a React/TypeScript single-page chat client that authenticates users against a REST backend and then connects them to a raw WebSocket server for real-time, multi-room messaging with live presence and typing indicators — essentially a teaching/demo project",
+    tags: ['React + TypeScript', 'Tailwind CSS', 'Zod', 'React Router', 'Reac Hook Form', 'Lucide React', 'NProgress', 'Node/Express with Typscript', 'MongoDb', 'Mongoose', 'JWT', 'bycrypts', 'Multer', 'Cloudinary', 'Helmet', 'Pino'],
+    liveUrl: null,
+    sourceUrl: "https://github.com/leobertcamoro101-lab/Relay",
+  },
+  {
     id: 11,
     icon: "💼",
     iconBg: "bg-[#E4F2EB]",

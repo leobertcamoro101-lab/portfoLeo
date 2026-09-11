@@ -29,4 +29,13 @@ dist-ssr
 # to run cypress open terminal 1
 npm run dev
 # open terminal 2
+npm run test:e2e:ope
+
+# recommended
+# to run cypress open terminal 1
+npm run build
+
+npm run preview
+
+# open terminal 2
 npm run test:e2e:open
