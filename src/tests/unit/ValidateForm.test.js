@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { validateForm } from "../../components/pages/Contact/formValidation";
+import { validateForm } from "../../utils/validateForm";
 
 describe("validateForm", () => {
 
