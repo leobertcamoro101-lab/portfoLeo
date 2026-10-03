@@ -8,6 +8,8 @@ import Button from "../components/UI/Button";
 import ContactForm from "./Contact/ContactForm";
 import { useTranslation } from "react-i18next";
 import Modal from "../components/UI/Modal";
+import { FiMail } from "react-icons/fi";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 function Contact() {
   const { t } = useTranslation();
@@ -60,38 +62,32 @@ function Contact() {
             </svg>
             +63 932 302 0460
           </a>
-          <div className="flex flex-col sm:flex-row justify-center flex-wrap gap-3">
-            {/* <Button href="mailto:leobertcamoro101@gmail.com" variant="white">Email</Button> */}
-            <Button href={`mailto:${email}`} variant="white">
-              {t("contact.email")}
+          <div className="flex flex-col sm:flex-row items-center justify-center flex-wrap gap-3">
+            <Button href={`mailto:${email}`} variant="white" size="icon">
+              <FiMail size={18} aria-hidden="true" />
+              <span className="sr-only">{t("contact.email")}</span>
             </Button>
             <Button
               href="https://github.com/leobertcamoro101-lab"
               variant="ghost"
+              size="icon"
             >
-              GitHub
+              <FaGithub size={18} aria-hidden="true" />
+              <span className="sr-only">GitHub</span>
             </Button>
             <Button
               href="https://www.linkedin.com/in/leobert-camoro-1b811a231/"
               variant="ghost"
+              size="icon"
             >
-              LinkedIn
+              <FaLinkedinIn size={18} aria-hidden="true" />
+              <span className="sr-only">LinkedIn</span>
             </Button>
             <Button onClick={() => setIsOpen(true)} variant="white">
               {t("contact.messageMe")}
             </Button>
           </div>
         </motion.div>
-
-        {/* ── Contact form ── */}
-        {/* <motion.div
-        variants={popIn}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-80px" }}
-        >
-        <ContactForm />
-        </motion.div> */}
       </section>
     </>
   );
