@@ -4,13 +4,13 @@ import {
   fadeUp,
   slideRight,
   popIn,
-} from "../../utils/animations";
-import Button from "../UI/Button";
-import LinkButton from "../UI/LinkButton";
-import TypewriterText from "../TypewriterText";
-import ProfileImage from "../../assets/profile.jpg";
+} from "../utils/animations";
+import Button from "../components/UI/Button";
+import LinkButton from "../components/UI/LinkButton";
+import TypewriterText from "../components/TypewriterText";
+import ProfileImage from "../assets/profile.jpg";
 import { useTranslation } from "react-i18next";
-import Avatar from "../UI/Avatar";
+import Avatar from "../components/UI/Avatar";
 
 function Hero() {
   const { t } = useTranslation();

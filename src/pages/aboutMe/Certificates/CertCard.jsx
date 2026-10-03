@@ -1,5 +1,5 @@
 import {motion} from 'framer-motion'
-import { popIn } from '../../../../utils/animations';
+import { popIn } from '../../../utils/animations';
 function CertCard({ cert, index }) {
   return (
     <motion.div

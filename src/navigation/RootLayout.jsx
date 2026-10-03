@@ -1,11 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation, Outlet } from "react-router-dom";
-import { fadeIn, pageVariants } from "../../utils/animations";
-import Navbar from "../Navbar";
+import { fadeIn, pageVariants } from "../utils/animations";
+import Navbar from "./Navbar";
 // import Divider from '../Divider';
-import Footer from "../Footer";
-import FloatingMenu from "../FloatingMenu";
-import AnimatedSection from "../AnimatedSection";
+import Footer from "../components/Footer";
+import FloatingMenu from "../components/FloatingMenu";
+import AnimatedSection from "../components/AnimatedSection";
 
 function RootLayout() {
   const location = useLocation();

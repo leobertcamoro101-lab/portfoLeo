@@ -1,9 +1,9 @@
 import ProfileHero from "./aboutMe/ProfileHero"
-import Divider from "../UI/Divider";
+import Divider from "../components/UI/Divider";
 import WorkExperience from "./aboutMe/WorkExperience";
 import Education from "./aboutMe/Education";
 import Certificates from "./aboutMe/Certificates";
-import ScrollToTopButton from "../ScrollToTopButton";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 
 function AboutMe(){

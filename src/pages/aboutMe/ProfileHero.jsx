@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import ProfileImage from "../../../assets/profile.jpg";
+import ProfileImage from "../../assets/profile.jpg";
 import { useTranslation } from "react-i18next";
-import Avatar from "../../UI/Avatar";
+import Avatar from "../../components/UI/Avatar";
 
 function ProfileHero() {
   const { t } = useTranslation();
@@ -35,7 +35,10 @@ function ProfileHero() {
 
           <p className="text-[15px] text-[#7A7468] leading-[1.75] max-w-[480px] mb-6">
             {/* {t("aboutMe.bio")} */}
-            I began my web development journey in college, working with HTML, CSS, JavaScript, and the React framework. After graduation, I secured my first role as a Software Engineer, where I was assigned to a template project to practice building a frontend with React and a backend using Laravel (a PHP framework). Through this experience, I was introduced to real‑world web development and discovered the wide range of modern JavaScript frameworks and libraries available, including React and others, which broadened my understanding of the evolving technology landscape.
+            I'm an AI‑assisted, beginner developer who crafts, accessible, and
+          visually refined web experiences. With a deep commitment to clean code
+          and intuitive UI, I focus on building solutions that genuinely make
+          people's lives easier.
           </p>
 
           <div className="flex flex-wrap gap-3 justify-center sm:justify-start">

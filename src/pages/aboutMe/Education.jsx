@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { popIn, fadeUp, staggerContainer } from "../../../utils/animations";
-import SectionEyebrow from "../../SectionEyebrow";
+import { popIn, fadeUp, staggerContainer } from "../../utils/animations";
+import SectionEyebrow from "../../components/SectionEyebrow";
 import { EDUCATION } from "./aboutMeData";
 import { useTranslation } from "react-i18next";
 

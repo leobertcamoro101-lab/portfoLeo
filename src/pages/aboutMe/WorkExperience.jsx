@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { popIn, fadeUp, staggerContainer } from "../../../utils/animations";
-import SectionEyebrow from "../../SectionEyebrow";
-import TagCarousel from "../../TagCarousel";
+import { popIn, fadeUp, staggerContainer } from "../../utils/animations";
+import SectionEyebrow from "../../components/SectionEyebrow";
+import TagCarousel from "../../components/TagCarousel";
 import { WORK_EXPERIENCE } from "./aboutMeData";
 import { useTranslation } from "react-i18next";
 

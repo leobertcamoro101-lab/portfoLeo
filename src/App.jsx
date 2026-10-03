@@ -1,15 +1,15 @@
 // for react router dom v2
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import RootLayout from "./components/pages/RootLayout";
+import RootLayout from "./navigation/RootLayout";
 // import Hero from "./components/pages/Hero";
 // import Projects from "./components/pages/Projects";
 // import Skills from "./components/pages/Skills";
 // import Contact from "./components/pages/Contact";
 // import Divider from "../Divider";
 // import ScrollToTopButton from "./components/ScrollToTopButton";
-import AboutMe from "./components/pages/AboutMe";
-import Landing from "./components/pages/Landing";
+import AboutMe from "./pages/AboutMe";
+import Landing from "./pages/Landing";
 import useFonts from "./components/useFonts"; //redundant
 
 //this is debug code

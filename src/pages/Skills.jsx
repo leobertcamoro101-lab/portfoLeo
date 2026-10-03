@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { fadeUp } from "../../utils/animations.js";
-import AnimatedSection from "../AnimatedSection.jsx";
-import SectionEyebrow from "../SectionEyebrow";
-import { SKILLS } from "../data";
+import { fadeUp } from "../utils/animations.js";
+import AnimatedSection from "../components/AnimatedSection.jsx";
+import SectionEyebrow from "../components/SectionEyebrow.jsx";
+import { SKILLS } from "../components/data.jsx";
 import { useTranslation } from "react-i18next";
 
 function Skills() {

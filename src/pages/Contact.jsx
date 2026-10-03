@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import { 
   fadeUp, 
   // popIn 
-} from "../../utils/animations";
+} from "../utils/animations";
 import { useState } from "react";
-import Button from "../UI/Button";
+import Button from "../components/UI/Button";
 import ContactForm from "./Contact/ContactForm";
 import { useTranslation } from "react-i18next";
-import Modal from "../UI/Modal";
+import Modal from "../components/UI/Modal";
 
 function Contact() {
   const { t } = useTranslation();

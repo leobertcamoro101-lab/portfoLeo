@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import AnimatedSection from "../../AnimatedSection";
-import SectionEyebrow from "../../SectionEyebrow";
+import AnimatedSection from "../../components/AnimatedSection";
+import SectionEyebrow from "../../components/SectionEyebrow";
 import CertCard from "./Certificates/CertCard";
 import { CERTIFICATES } from "./aboutMeData";
 import { useTranslation } from "react-i18next";

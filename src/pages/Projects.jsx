@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import SectionEyebrow from "../SectionEyebrow";
-import { PROJECTS } from "../data";
+import SectionEyebrow from "../components/SectionEyebrow";
+import { PROJECTS } from "../components/data";
 import ProjectCard from "./Projects/ProjectCard";
 import { useTranslation } from "react-i18next";
-import AnimatedSection from "../AnimatedSection";
+import AnimatedSection from "../components/AnimatedSection";
 import { AnimatePresence } from "framer-motion";
 
 const VISIBLE_COUNT = 2; // show 2 latest projects first

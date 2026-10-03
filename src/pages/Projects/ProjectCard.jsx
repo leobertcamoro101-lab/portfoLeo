@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { popIn } from "../../../utils/animations";
+import { popIn } from "../../utils/animations";
 import ProjectTypeBadge from "./ProjectTypeBadge";
-import TagCarousel from "../../TagCarousel";
+import TagCarousel from "../../components/TagCarousel";
 import GitHubContributions from "./GithubContributions";
 
 function ProjectCard({ project, index }) {
