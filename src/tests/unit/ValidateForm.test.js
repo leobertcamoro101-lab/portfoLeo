@@ -10,7 +10,7 @@ describe("validateForm", () => {
       subject: "",
       message: "",
     });
-    console.log("result:", JSON.stringify(result, null, 2)); // ← add this
+    
     expect(result.valid).toBe(false);
     expect(result.errors.from_name).toBeDefined();
     expect(result.errors.from_email).toBeDefined();
