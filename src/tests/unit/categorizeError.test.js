@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { categorizeError, ERROR_CATEGORIES } from "../../utils/categorizeError";
+import { categorizeError, ERROR_CATEGORIES } from "../../pages/Contact/CategorizedError.jsx";
 
 describe("categorizeError", () => {
 
