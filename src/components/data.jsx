@@ -8,7 +8,7 @@ export const PROJECTS = [
     description:
       "Relay is a React/TypeScript single-page chat client that authenticates users against a REST backend and then connects them to a raw WebSocket server for real-time, multi-room messaging with live presence and typing indicators — essentially a teaching/demo project",
     tags: ['React + TypeScript', 'Tailwind CSS', 'Zod', 'React Router', 'Reac Hook Form', 'Lucide React', 'NProgress', 'Node/Express with Typscript', 'MongoDb', 'Mongoose', 'JWT', 'bycrypts', 'Multer', 'Cloudinary', 'Helmet', 'Pino'],
-    liveUrl: null,
+    liveUrl: "https://relay-chat-blush.vercel.app/",
     sourceUrl: "https://github.com/leobertcamoro101-lab/Relay",
   },
   {
@@ -32,7 +32,7 @@ export const PROJECTS = [
     description:
       "Full-stack task manager with Laravel API backend, React frontend, JWT auth via Sanctum, and PostgreSQL database.",
     tags: ['React', 'Vite', 'Laravel', 'PostgreSQL', 'Sanctum', 'Zustand', 'React Query'],
-    liveUrl: null,
+    liveUrl: "https://taskflow-green.vercel.app/",
     sourceUrl: "https://github.com/leobertcamoro101-lab/TaskFlow-react-laravel",
   },
   {
