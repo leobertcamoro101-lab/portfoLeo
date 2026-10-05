@@ -71,6 +71,7 @@ function Contact() {
               href="https://github.com/leobertcamoro101-lab"
               variant="ghost"
               size="icon"
+              title="GitHub"
             >
               <FaGithub size={18} aria-hidden="true" />
               <span className="sr-only">GitHub</span>
@@ -79,6 +80,7 @@ function Contact() {
               href="https://www.linkedin.com/in/leobert-camoro-1b811a231/"
               variant="ghost"
               size="icon"
+              title="LinkedIn"
             >
               <FaLinkedinIn size={18} aria-hidden="true" />
               <span className="sr-only">LinkedIn</span>
