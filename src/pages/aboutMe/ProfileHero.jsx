@@ -35,7 +35,7 @@ function ProfileHero() {
 
           <p className="text-[15px] text-[#7A7468] leading-[1.75] max-w-[480px] mb-6">
             {/* {t("aboutMe.bio")} */}
-            I'm an AI‑assisted, beginner developer who crafts, accessible, and
+            I'm an AI‑assisted, developer who crafts, accessible, and
           visually refined web experiences. With a deep commitment to clean code
           and intuitive UI, I focus on building solutions that genuinely make
           people's lives easier.
