@@ -105,4 +105,8 @@ LinkedIn: https://www.linkedin.com/in/leobert-camoro-1b811a231/
 Email: leobertcamoro101@gmail.com
 License
 This project is for personal portfolio use.
-npm run build
+
+A few quick notes:
+- The current app clearly includes EmailJS config from [.env.example](.env.example) and a contact form in [src/pages/Contact/ContactForm.jsx](src/pages/Contact/ContactForm.jsx), so that belongs in the README.
+- The default React/Vite text should definitely be removed.
+- If you want, I can turn this into a more polished “personal brand” version with your real name, links, and screenshots, or I can replace [README.md](README.md) for you directly.
