@@ -1,107 +1,90 @@
-# Leobert Camoro | Portfolio
+# Leobert Camoro
 
-A personal portfolio website built with React and Vite to showcase projects, skills, experience, and contact information.
+### Frontend Developer | Building thoughtful experiences with React
 
-## Overview
+Welcome to my portfolio repository. I’m Leobert, a developer learning by building, experimenting, and contributing to open-source projects. I’m focused on growing my frontend skills and creating web experiences that feel clear, responsive, and enjoyable to use.
 
-This portfolio highlights:
-- a landing page with hero section and intro
-- a personal about-me section
-- project showcase
-- skills and technologies
-- contact form with EmailJS
-- responsive design and dark mode support
+This portfolio brings together my projects, skills, background, and ways to get in touch.
 
-## Tech Stack
+## About the portfolio
 
-- React
+The site includes:
+
+- A landing page with a personal introduction and selected projects
+- A skills section highlighting the tools and technologies I’m learning
+- An about page with work experience, education, and certificates
+- A contact form powered by EmailJS
+- Responsive layouts, dark-mode styling, and animated interactions
+- Internationalization support with i18next
+
+## Built with
+
+- React 19 and JavaScript
 - Vite
-- JavaScript
 - Tailwind CSS
-- Framer Motion
 - React Router
-- i18next
+- Framer Motion
+- i18next and react-i18next
 - EmailJS
-- Vitest
-- Cypress
 
-## Features
+## Run locally
 
-- Responsive portfolio layout
-- Animated UI sections
-- Multi-language support
-- Contact form integration
-- Dark mode styling
-- Project and experience sections
+### Prerequisites
 
-## Live Demo
+- Node.js (a current LTS release)
+- npm
 
-You can view the app locally in development mode, or deploy it to Vercel/Netlify for production hosting.
+### Setup
 
-## Getting Started
+1. Clone the repository:
 
-### 1. Clone the repository
+   ```bash
+   git clone https://github.com/leobertcamoro101-lab/portfoLeo.git
+   cd portfoLeo
+   ```
 
-```bash
-git clone https://github.com/leobertcamoro101-lab/portfoLeo.git
-cd portfoLeo
+2. Install dependencies:
 
-2. Install dependencies
+   ```bash
+   npm install
+   ```
 
-npm install
+3. Configure EmailJS. Copy `.env.example` to `.env` (or `.env.local`), then fill in your EmailJS credentials:
 
-3. Configure environment variables
-Copy the example env file and add your EmailJS credentials:
+   ```env
+   VITE_EMAILJS_SERVICE_ID=your_service_id
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id
+   VITE_EMAILJS_PUBLIC_KEY=your_public_key
+   ```
 
-cp .env.example .env
+   These variables are used by the contact form. Keep local environment files out of version control; never put private credentials in frontend code.
 
-Then update the values in .env:
+4. Start the development server:
 
-VITE_EMAILJS_SERVICE_ID=your_service_id_here
-VITE_EMAILJS_TEMPLATE_ID=your_template_id_here
-VITE_EMAILJS_PUBLIC_KEY=your_public_key_here
+   ```bash
+   npm run dev
+   ```
 
-4. Run the app
+   Open the local URL printed in your terminal.
 
-npm run dev
+## Available commands
 
-Open the local URL shown in the terminal.
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server |
+| `npm run build` | Create a production build |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
+| `npm run test` | Run unit tests with Vitest |
+| `npm run test:e2e` | Run end-to-end tests with Cypress |
+| `npm run test:all` | Run unit and end-to-end tests |
 
-Scripts
+## Deployment
 
-npm run dev        # start Vite dev server
-npm run build      # production build
-npm run preview    # preview production build
-npm run lint       # run ESLint
-npm run test       # run Vitest tests
-npm run test:e2e   # run Cypress end-to-end tests
+The app can be deployed to a static hosting provider such as Vercel or Netlify. Configure the three `VITE_EMAILJS_*` environment variables in the hosting provider’s project settings, then use `npm run build` as the build command and `dist` as the output directory.
 
-Project Structure
+## Find me online
 
-src/
-  components/
-  pages/
-  assets/
-  utils/
-  navigation/
-public/
-.env.example
-package.json
-vite.config.js
-
-Deployment
-This project is ready to be deployed on:
-
-Vercel
-Netlify
-any static host that supports Vite builds
-For production builds:
-
-npm run build
-
-Contact
-GitHub: https://github.com/leobertcamoro101-lab
-LinkedIn: https://www.linkedin.com/in/leobert-camoro-1b811a231/
-Email: leobertcamoro101@gmail.com
-License
-This project is for personal portfolio use.
+- [GitHub](https://github.com/leobertcamoro101-lab)
+- [LinkedIn](https://www.linkedin.com/in/leobert-camoro-1b811a231/)
+- [Email](mailto:leobertcamoro101@gmail.com)
