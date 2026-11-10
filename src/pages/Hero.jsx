@@ -38,7 +38,7 @@ function Hero() {
           variants={popIn}
           className="font-serif text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.02em] text-[#1A1814] dark:text-[#F7F5F0] mb-4"
         >
-          {t("hero.title")}{" "}
+          {/* {t("hero.title")}{" "} */}
           <em className="text-[#7A7468] dark:text-[#A09890] italic">
             Leobert Camoro
           </em>{" "}
